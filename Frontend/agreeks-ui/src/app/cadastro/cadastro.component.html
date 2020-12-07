@@ -1,0 +1,68 @@
+<div class="container">
+    <!--Criacao da row com titulo-->
+    <div class="row mt-5 mb-5">
+        <div class="col-md-12">
+            <h1 class="text-center">Cadastrar</h1>
+        </div>
+    </div>
+    <!--/Criacao da row com titulo-->
+    
+    <div class="row mb-5 d-flex justify-content-center">
+        <div class="col-md-8">
+            <div>
+                <!--Criacao da label e input nome-->
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui"
+                        [(ngModel)]='usuario.nome'>
+                </div>
+                <!--/Criacao da label e input nome-->
+                
+                <!--Criacao do form bibliografia-->
+                <div class="form-group">
+                    <label for="nome">Biografia</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o sua bio aqui"
+                        [(ngModel)]='usuario.bio'>
+                </div>
+
+                <!--
+                <div class="form-group">
+                    <label for="nome">Foto</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Insira o link da sua foto aqui"
+                        [(ngModel)]='usuario.foto'>
+                </div>
+                -->
+
+                <!--Criacao do form nome de usuario-->
+                <div class="form-group">
+                    <label for="usuario">Nome de usuário</label>
+                    <input type="text" class="form-control" id="usuario" placeholder="Digite um nome de usuário"
+                        [(ngModel)]='usuario.usuario'>
+                </div>
+                <!--/Criacao do form nome de usuario-->
+
+                <!--Criacao do form senha-->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
+                        (input)='conferirSenha($event)' value='{{senha}}'>
+                </div>
+                <!--/Criacao do form senha-->
+
+                <!--Criacao do form confirmar-senha-->
+                <div class="form-group">
+                    <label for="senhaConf">Confirmar Senha</label>
+                    <input type="password" class="form-control" id="senhaConf"
+                        placeholder="Digite a confirmação de senha" [(ngModel)]='usuario.senha'>
+                </div>
+                <!--/Criacao do form confirmar-senha-->
+
+                <!--Criacao do botão cadastrar-->
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button>
+                </div>
+                <!--/Criacao do botão cadastrar-->
+            </div>
+        </div>
+    </div>
+</div>

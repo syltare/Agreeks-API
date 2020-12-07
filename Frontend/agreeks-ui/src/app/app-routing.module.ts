@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { LoginComponent } from './login/login.component';
+import { FeedComponent } from './feed/feed.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
