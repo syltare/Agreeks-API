@@ -16,6 +16,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CarouselComponent } from './share-component/carousel/carousel.component';
 import { FlipCardComponent } from './share-component/flip-card/flip-card.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { FlipCardComponent } from './share-component/flip-card/flip-card.compone
     CadastroComponent,
     CarouselComponent,
     FlipCardComponent,
+    
   ],
   imports: [
     BrowserModule,
