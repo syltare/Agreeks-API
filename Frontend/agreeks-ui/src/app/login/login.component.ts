@@ -9,20 +9,22 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  userLogin: UserLogin = new UserLogin()
 
   constructor(
-    private authService : AuthService,
-    private router : Router
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
   }
 
-  entrar(){
-  this.authService.logar(this.userLogin).subscribe((resp: any = UserLogin) => {
-    this.userLogin = resp
-    localStorage.setItem('token',this.userLogin.token)
-    this.router.navigate(['/feed'])})
+  entrar() {
+    this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
+      this.userLogin = resp
+      localStorage.setItem('token', this.userLogin.token)
+      this.router.navigate(['/feed'])
+    })
   }
 
 }

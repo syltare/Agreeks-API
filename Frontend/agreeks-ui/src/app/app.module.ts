@@ -13,6 +13,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CarouselComponent } from './share-component/carousel/carousel.component';
+import { FlipCardComponent } from './share-component/flip-card/flip-card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     SobreNosComponent,
     LoginComponent,
     CadastroComponent,
+    CarouselComponent,
+    FlipCardComponent,
   ],
   imports: [
     BrowserModule,

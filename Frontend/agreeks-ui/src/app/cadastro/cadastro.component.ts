@@ -16,7 +16,7 @@ export class CadastroComponent implements OnInit {
     private router : Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   conferirSenha(event : any) {
@@ -25,7 +25,7 @@ export class CadastroComponent implements OnInit {
 
   cadastrar() {
     if(this.senha === this.usuario.senha){
-      this.authService.cadastrar(this.usuario).subscribe((resp : any = Usuario) => {
+      this.authService.cadastrar(this.usuario).subscribe((resp : Usuario) => {
         this.usuario = resp
         this.router.navigate(['/login'])
         alert('Usuario cadastrado com sucesso!')
