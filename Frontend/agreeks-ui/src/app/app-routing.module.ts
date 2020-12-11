@@ -6,10 +6,14 @@ import { LoginComponent } from './login/login.component';
 import { FeedComponent } from './feed/feed.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'sobre-nos', component: SobreNosComponent }
+  { path: 'feed', component: FeedComponent },
+  { path: 'sobre-nos', component: SobreNosComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent }
 ];
 
 @NgModule({

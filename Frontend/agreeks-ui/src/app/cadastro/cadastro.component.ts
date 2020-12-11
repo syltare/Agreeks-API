@@ -20,7 +20,7 @@ export class CadastroComponent implements OnInit {
   }
 
   conferirSenha(event : any) {
-    this.senha = event.target.values
+    this.senha = event.target.value
   }
 
   cadastrar() {

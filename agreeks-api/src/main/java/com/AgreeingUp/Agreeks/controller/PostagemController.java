@@ -24,6 +24,7 @@ import com.AgreeingUp.Agreeks.repository.PostagemRepository;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 
 public class PostagemController {
+	
 	@Autowired
 	private PostagemRepository repository;
 
@@ -32,7 +33,7 @@ public class PostagemController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 
-	@GetMapping("/id/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Postagem> getById(@PathVariable int id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
@@ -42,10 +43,15 @@ public class PostagemController {
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 
 	}
-
+	
+	@GetMapping("/texto/{texto}")
+	public ResponseEntity<List<Postagem>> findByTexto(@PathVariable String texto) {
+		return ResponseEntity.ok(repository.findAllByPostContainingIgnoreCase(texto));
+	}
+	
 	@PutMapping
-	public ResponseEntity<Postagem> put(@RequestBody Postagem postagem) {
-		return ResponseEntity.ok(repository.save(postagem));
+	public ResponseEntity<Postagem> put (@RequestBody Postagem postagem) {
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem)); 
 	}
 
 	@DeleteMapping("/{id}")
