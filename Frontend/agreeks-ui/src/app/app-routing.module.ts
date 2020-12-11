@@ -5,6 +5,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { LoginComponent } from './login/login.component';
 import { FeedComponent } from './feed/feed.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'feed', component: FeedComponent },
   { path: 'sobre-nos', component: SobreNosComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'cadastro', component: CadastroComponent }
+  { path: 'cadastro', component: CadastroComponent },
+  { path: 'cadastro-categoria', component: PostCategoriaComponent }
 ];
 
 @NgModule({

@@ -38,23 +38,24 @@ export class FeedComponent implements OnInit {
     })
 
   }
-  
-  // publicar() {
-  //   this.categoria.id = this.idCategoria
-  //   this.postagem.categoria = this.categoria
 
-  //   if (this.postagem.titulo == null || this.postagem.texto == null || this.postagem.tema == null) {
-  //     alert('Preencha todos os campos antes de publicar')
-  //   }
-  //   else {
-  //     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-  //       this.postagem = resp
-  //       this.postagem = new Postagem()
-  //       alert('Parabéns!!!!deubomm mt bom tirou as palavras da minha boca!')
-  //       this.findAllPostagens()
-  //     })
-  //   }
-  // }
+  publicar() {
+    this.categoria.id = this.idCategoria
+    this.postagem.categoria = this.categoria
+
+    if (this.postagem.titulo == null || this.postagem.categoria == null || this.postagem.categoria == null) {
+      alert ('Preencha todos os campos antes de publicar!')
+    } else {
+      this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+        this.postagem = resp
+        this.postagem = new Postagem()
+        alert('Postagem realizada com sucesso!')
+        this.findAllPostagens()
+      })
+    }
+  }
+  
+
 findAllCategorias(){
   this.categoriaService.getAllCategorias().subscribe((resp : Categoria[])=>{
     this.listaCategorias = resp

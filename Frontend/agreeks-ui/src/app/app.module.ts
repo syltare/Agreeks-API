@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CarouselComponent } from './share-component/carousel/carousel.component';
 import { FlipCardComponent } from './share-component/flip-card/flip-card.component';
+import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 
 
 @NgModule({
@@ -29,6 +32,8 @@ import { FlipCardComponent } from './share-component/flip-card/flip-card.compone
     CadastroComponent,
     CarouselComponent,
     FlipCardComponent,
+    BarraLateralComponent,
+    PostCategoriaComponent,
     
   ],
   imports: [
@@ -36,7 +41,8 @@ import { FlipCardComponent } from './share-component/flip-card/flip-card.compone
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

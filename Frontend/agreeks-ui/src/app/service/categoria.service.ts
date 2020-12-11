@@ -14,15 +14,15 @@ export class CategoriaService {
     headers : new HttpHeaders().set('Authorization', localStorage.getItem('token')!)
   }
   getAllCategorias() : Observable<Categoria[]>{
-    return this.http.get<Categoria[]>('http://localhost:9000/caterogia', this.token)
+    return this.http.get<Categoria[]>('http://localhost:8080/categoria', this.token)
 
   }
   getByIdCategoria(id : number) : Observable<Categoria>{
-    return this.http.get<Categoria>(`http://localhost:9000/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`, this.token)
 
   }
   postCategoria(categoria : Categoria) : Observable<Categoria>{
-    return this.http.post<Categoria>('http://localhost:9000/categoria',categoria,this.token )
+    return this.http.post<Categoria>('http://localhost:8080/categoria',categoria,this.token )
   }
 
 }
