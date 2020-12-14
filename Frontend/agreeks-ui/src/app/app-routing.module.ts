@@ -6,6 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { FeedComponent } from './feed/feed.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
 const routes: Routes = [
@@ -15,7 +19,11 @@ const routes: Routes = [
   { path: 'sobre-nos', component: SobreNosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'cadastro-categoria', component: PostCategoriaComponent }
+  { path: 'cadastro-categoria', component: PostCategoriaComponent },
+  { path: 'editar-post/:id', component: PutPostagemComponent },
+  { path: 'delete-post/:id', component: DeletePostagemComponent },
+  { path: 'editar-categoria/:id', component: PutCategoriaComponent },
+  { path: 'delete-categoria/:id', component: DeleteCategoriaComponent }
 ];
 
 @NgModule({

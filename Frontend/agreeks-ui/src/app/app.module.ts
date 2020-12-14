@@ -18,6 +18,10 @@ import { CarouselComponent } from './share-component/carousel/carousel.component
 import { FlipCardComponent } from './share-component/flip-card/flip-card.component';
 import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
 @NgModule({
@@ -34,6 +38,10 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     FlipCardComponent,
     BarraLateralComponent,
     PostCategoriaComponent,
+    PutPostagemComponent,
+    PutCategoriaComponent,
+    DeletePostagemComponent,
+    DeleteCategoriaComponent,
     
   ],
   imports: [

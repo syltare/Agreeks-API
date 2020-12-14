@@ -5,5 +5,7 @@ export class Postagem {
     public titulo: string
     public post: string
     public resposta: string
+    public data: Date
     public categoria : Categoria
+    
 }
