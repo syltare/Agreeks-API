@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,9 @@ import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { DuvidasComponent } from './duvidas/duvidas.component';
+import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 @NgModule({
@@ -42,6 +46,9 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     PutCategoriaComponent,
     DeletePostagemComponent,
     DeleteCategoriaComponent,
+    DuvidasComponent,
+    NavVerticalComponent,
+    AlertasComponent,
     
   ],
   imports: [
@@ -50,7 +57,8 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

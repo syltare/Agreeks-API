@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 
 @Injectable({
@@ -11,7 +12,7 @@ export class CategoriaService {
   constructor(private http: HttpClient) { }
 
   token = {
-    headers : new HttpHeaders().set('Authorization', localStorage.getItem('token')!)
+    headers : new HttpHeaders().set('Authorization', environment.token!)
   }
   getAllCategorias() : Observable<Categoria[]>{
     return this.http.get<Categoria[]>('http://localhost:8080/categoria', this.token)
@@ -31,6 +32,11 @@ export class CategoriaService {
 
   deleteCategoria(id: number) : Observable<Categoria> {
     return this.http.delete<Categoria>(`http://localhost:8080/categoria/${id}`, this.token)
+  }
+
+  getByNomeCategoria(nome: string) : Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(`http://localhost:8080/categoria/descricao/${nome}`, this.token)
+
   }
 
 }

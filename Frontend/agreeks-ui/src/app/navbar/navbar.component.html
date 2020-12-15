@@ -1,16 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light monospace text-uppercase">
+<nav class="navbar navbar-expand-lg navbar-light monospace text-uppercase" style="background-color: #9CA651;">
 
-  <a class="navbar-brand" href="#" >
-    <img src="assets/img/logo2.png" width="30" height="30" alt="logo agreeks"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+  <div class="collapse navbar-collapse font-weight" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo2.png" width="30" height="30" alt="logo agreeks"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+          aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Mensagens</a>
@@ -25,7 +23,7 @@
   <div class="collapse navbar-collapse">
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-inline-success my-2 my-sm-0" type="submit"></button>
+      <button class="btn btn-inline-success my-2 my-sm-0" type="submit" ></button>
     </form>
   </div>
 
@@ -36,24 +34,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/cadastro">Cadastrar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"> | </a>
-      </li>
-      
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Opções
-          
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Dark mode</a>
-          <a class="dropdown-item" href="#">Dúvidas</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink='/sobre-nos'>Sobre Nós</a>
-        </div>
       </li>
     </ul>
   </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class PostCategoriaComponent implements OnInit {
 
   constructor(
     private categoriaService: CategoriaService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -36,12 +38,12 @@ export class PostCategoriaComponent implements OnInit {
 
   cadastrar() {
     if (this.categoria.descricao == null) {
-      alert('Preencha o campo de nome do tema corretamente')
+      this.alerta.showAlertInfo('Preencha o campo de nome do tema corretamente')
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) =>{
         this.categoria = resp
         this.router.navigate(['/feed'])
-        alert('Tema cadastrado com sucesso!')
+        this.alerta.showAlertSucess('Tema cadastrado com sucesso!')
       })
     }
   }

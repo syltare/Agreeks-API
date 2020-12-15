@@ -15,7 +15,7 @@
                 <!--Form-group Usuario/email-->
                 <div class="form-group">
                     <label for="exampleInputEmail1">Endereço de email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                         placeholder="Seu email" [(ngModel)]='userLogin.email'>
                     <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                         ninguém.</small>
@@ -27,6 +27,7 @@
                     <label for="exampleInputPassword1">Senha</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
                         [(ngModel)]='userLogin.senha'>
+                        <small id="emailHelp" class="form-text text-muted">Não compartilhe sua senha com ninguém</small>
                 </div>
                 <!--/Form-group Senha-->
 
