@@ -23,7 +23,7 @@
   <div class="collapse navbar-collapse">
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-inline-success my-2 my-sm-0" type="submit" ></button>
+      <button class="btn btn-inline-success my-2 my-sm-0" type="submit" (click)='findByTituloPostagem()'>Buscar</button>
     </form>
   </div>
 
@@ -34,6 +34,18 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/cadastro">Cadastrar</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          OPÇÕES
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#" disabled>Dark-Mode</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Sobre nós</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Contato</a>
+          </div>
       </li>
     </ul>
   </div>

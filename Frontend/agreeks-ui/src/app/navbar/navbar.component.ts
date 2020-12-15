@@ -54,4 +54,14 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/login'])
     environment.token = ''
   }
+
+  findByTituloPostagem() {
+    if (this.titulo === '') {
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
+  }
 }
