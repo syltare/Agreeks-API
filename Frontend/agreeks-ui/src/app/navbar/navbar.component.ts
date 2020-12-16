@@ -33,8 +33,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0)
 
-    this.findAllPostagens()
-    this.findAllCategorias()
+    // this.findAllPostagens()
+    // this.findAllCategorias()
   }
 
   findAllPostagens() {

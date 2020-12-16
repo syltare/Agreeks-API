@@ -5,6 +5,7 @@ import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
+import { Categoria2Service } from '../service/categoria2.service';
 import { PostagemService } from '../service/postagem.service';
 
 @Component({
@@ -28,19 +29,20 @@ export class FeedComponent implements OnInit {
 
   constructor(
     private postagemService: PostagemService,
-    private categoriaService: CategoriaService,
+    private categoriaService: Categoria2Service,
     private alerta: AlertasService,
     private router: Router
 
   ) { }
 
   ngOnInit() {
-    let token = environment.token
+    console.log(environment.token)
+    // let token = environment.token
 
-    if (token == '') {
-      this.router.navigate(['/login'])
-      this.alerta.showAlertInfo('Necessário fazer login')
-    }
+    // if (token == '') {
+    //   this.router.navigate(['/login'])
+    //   this.alerta.showAlertInfo('Necessário fazer login')
+    // }
 
     window.scroll(0, 0)
 

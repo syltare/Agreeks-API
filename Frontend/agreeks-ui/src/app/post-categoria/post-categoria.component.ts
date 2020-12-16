@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
+import { Categoria2Service } from '../service/categoria2.service';
 
 @Component({
   selector: 'app-post-categoria',
@@ -15,7 +16,7 @@ export class PostCategoriaComponent implements OnInit {
   listaCategorias: Categoria[]
 
   constructor(
-    private categoriaService: CategoriaService,
+    private categoriaService: Categoria2Service,
     private router: Router,
     private alerta: AlertasService
   ) { }
