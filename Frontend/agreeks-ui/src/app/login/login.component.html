@@ -21,7 +21,13 @@
                         ninguém.</small>
                 </div>
                 <!--/Form-group Usuario/email-->
-
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nome</label>
+                    <input type="email" class="form-control" id="nome" aria-describedby="emailHelp"
+                        placeholder="nome" [(ngModel)]='userLogin.nome'>
+                    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+                        ninguém.</small>
+                </div>
                 <!--Form-group Senha-->
                 <div class="form-group">
                     <label for="exampleInputPassword1">Senha</label>

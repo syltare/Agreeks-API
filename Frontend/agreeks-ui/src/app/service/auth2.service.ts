@@ -8,14 +8,13 @@ import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class Auth2Service {
 
   constructor(
     private http: HttpClient
   ) { }
 
   logar(userLogin: UserLogin) : Observable<UserLogin>{
-    console.log(userLogin)
     return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin )
   }
 
