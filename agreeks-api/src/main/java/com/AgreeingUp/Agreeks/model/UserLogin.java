@@ -9,6 +9,10 @@ public class UserLogin {
 	private String senha;
 	
 	private String token;
+	
+	private String imagem;
+	
+	private String bio;
 
 	public String getNome() {
 		return nome;
@@ -41,6 +45,23 @@ public class UserLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+	
 	
 	
 }

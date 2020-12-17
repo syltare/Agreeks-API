@@ -14,7 +14,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@NotNull
+	
 	@Size(min = 5, max = 255)
 	private String nome;
 	@NotNull
@@ -23,6 +23,10 @@ public class Usuario {
 	@NotNull
 	@Size(min = 8)
 	private String senha;
+	
+	private String imagem;
+	
+	private String bio;
 
 	public int getId() {
 		return id;
@@ -55,5 +59,24 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+	
+	
+	
 
 }
