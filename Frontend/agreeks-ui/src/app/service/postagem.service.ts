@@ -12,7 +12,7 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   token = {
-    headers : new HttpHeaders().set('Authorization', "Basic Y2FyaW5oYUBlbWFpbC5jb206MTIzNDU2")
+    headers : new HttpHeaders().set('Authorization', environment.token!)
   }
   getAllPostagens() : Observable<Postagem[]>{
     return this.http.get<Postagem[]>('http://localhost:8080/postagens', this.token)
