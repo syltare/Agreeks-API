@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-barra-lateral',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarraLateralComponent implements OnInit {
 
-  nome: string = 'Agricultor'
+  nomeUser = environment.nome
+  fotoUser = environment.imagem
+  bioUser = environment.bio
 
   constructor() { }
 

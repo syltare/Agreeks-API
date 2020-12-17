@@ -9,7 +9,7 @@
   
       <div class="col-md-8">
   
-        <h3 class="text-center mb-4 text-monospace">Feed</h3>
+        <h3 class="text-center mb-4 text-monospace">Faça uma pergunta!</h3>
   
         <div class="form-group">
           <label class="text-monospace" for="titulo">Título:</label>
@@ -19,6 +19,7 @@
         <div class="form-group">
           <label class="text-monospace" for="post">Texto:</label>
           <textarea class="form-control" id="post" rows="3" placeholder="Digite aqui o seu texto" [(ngModel)]='postagem.post'></textarea>
+          <small class="text-danger">*Digite no minimo 5 caracteres</small>
         </div>
   
         <div class="row d-flex align-items-end">

@@ -1,3 +1,10 @@
+
+  
+
+
+  
+
+
 <nav class="navbar navbar-expand-lg navbar-light monospace text-uppercase" style="background-color: #9CA651;">
 
   <div class="collapse navbar-collapse font-weight" id="conteudoNavbarSuportado">
@@ -10,32 +17,37 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </li>
-      <li class="nav-item">
+
+      
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Mensagens</a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="#">Perfil</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 
   <div class="collapse navbar-collapse">
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-inline-success my-2 my-sm-0" type="submit" (click)='findByTituloPostagem()'>Buscar</button>
+      <input class="form-control mr-sm-2 d-flex text-align-center" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-inline-success my-2 my-sm-0" type="submit"></button>
     </form>
   </div>
 
   <div class="d-flex justify-content-end">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Login</a>
+        <a class="nav-link text-uppercase" routerLink="/login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/cadastro">Cadastrar</a>
+        <a class="nav-link text-uppercase" routerLink="/cadastro">Cadastrar</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
+        <a class="nav-link text-uppercase" routerLink="/sobre-nos">Sobre nós</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           OPÇÕES
         </a>
@@ -46,7 +58,7 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Contato</a>
           </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>
