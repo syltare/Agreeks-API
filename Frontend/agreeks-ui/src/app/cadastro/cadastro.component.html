@@ -1,33 +1,38 @@
 <!-- <div
     style="background-image: url(https://cdn.discordapp.com/attachments/768840435442647064/788499529439248404/cebolinho.png);"> -->
-    <div>
+    
         <!-- Container da pagina Cadastro-->
         <div class="container">
             <!--Row que engloba titulo-->
 
 
 
-            <div class="row mb-2">
-                <div class="col-md-12">
-                    <h1 class="text-center ">Cadastra-se</h1>
+            <div class="row mb-2 ">
+                <div class="col-md-12 col-sm-12">
+                    <h1 class="text-center">Cadastre-se</h1>
                 </div>
             </div>
             <!--/Row que engloba titulo-->
 
-           <div class="row mb-5 mt-5 ">
-            <div class="col-md-4 ">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                </div>
+            </div>
+           <div class="row mb-5 mt-5">
+            <div class="col-md-6 col-sm-12  ">
                 <div class="d-flex justify-content-center">
-                    <img src="/assets/img/logo2.png" alt="cebola">
+                    <img class="w-50" src="/assets/img/logo2.png" alt="cebola">
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <h2>Faça parte da nossa comunidade!</h2>
                             
                 </div>
-        </div>
+            </div>
 
             <!--Row principal da pagina de cadastro-->
-            <div class="row mb-5 d-flex justify-content-center">
-                <div class="col-md-8">
+           
+                <div class="col-md-6 col-sm-12">
                     <div>
 
                         <!--Form nome-->
@@ -44,7 +49,7 @@
 
                          <div class="form-group">
                             <label for="nome">Biografia</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Digite o sua bio aqui" [(ngModel)]='usuario.bio'>
+                            <input type="text" class="form-control" id="nome" placeholder="Fale um pouco sobre você" [(ngModel)]='usuario.bio'>
                         </div>
 
                         <!--Form email-->
@@ -91,7 +96,7 @@
 
                     </div>
                 </div>
-            </div>
+            
             <!--/Row principal da pagina de cadastro-->
 
         </div>
@@ -99,4 +104,3 @@
 
     </div>
 
-</div>

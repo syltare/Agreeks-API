@@ -26,6 +26,8 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
 import { DuvidasComponent } from './duvidas/duvidas.component';
 import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { Carousel2Component } from './carousel2/carousel2.component';
+import { JumbotronComponent } from './share-component/jumbotron/jumbotron.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     DuvidasComponent,
     NavVerticalComponent,
     AlertasComponent,
+    Carousel2Component,
+    JumbotronComponent,
     
   ],
   imports: [

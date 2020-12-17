@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
-import { AuthService } from '../service/auth.service';
+import { Auth2Service } from '../service/auth2.service';
 import { CategoriaService } from '../service/categoria.service';
 import { PostagemService } from '../service/postagem.service';
 
@@ -16,7 +16,8 @@ export class NavbarComponent implements OnInit {
   
 
   constructor(
-    
+    private router: Router,
+    public auth2: Auth2Service
   ) { }
 
   ngOnInit() {
@@ -24,4 +25,8 @@ export class NavbarComponent implements OnInit {
     
   }
   
+  sair() {
+    this.router.navigate(['/login'])
+    environment.token = ''
+  }
 }

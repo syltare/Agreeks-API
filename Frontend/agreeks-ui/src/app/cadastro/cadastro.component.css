@@ -9,4 +9,24 @@
      border-color: #c3e6cb;
      background-color:#d4edda;
  }
+
+ .p1 {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .p2 {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+ 
+  .p4 {
+    font-family: "Lucida Handwriting", "Brush Script MT";
+  }
+
+  .p5 {
+    font-family: "Copperplate", "Papyrus";
+  }
  

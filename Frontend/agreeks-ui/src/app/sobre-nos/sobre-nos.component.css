@@ -1,0 +1,40 @@
+@import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
+
+
+.faGithub, .faLinkedin{
+    color: #9CA651
+}
+
+.faLinkedin:hover{
+color: #0072b1;
+}
+
+.faGithub:hover{
+color: #182C2D;
+}
+
+.p2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+.missao {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+} 
+
+a:link {
+  color: #585932
+}
+   
+a:hover {
+  color: #232226
+}
+
+.sobre-text-color{
+    color: #562D15
+}
+
+.bg{
+    background-color: #D1D996
+}
