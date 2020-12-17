@@ -1,0 +1,87 @@
+<!--Container da pagina Login-->
+<div class="bgcolor">
+    <div class="container ">
+
+        <!--Row que engloba Titulo-->
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center d-flex justify-content-center">Login</h1>
+            </div>
+        </div>
+        <!--/Row que engloba Titulo-->
+
+        <!--Row principal-->
+        <div class="row mb-5 mt-5 ">
+            <div class="col-md-6 ">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/img/logo2.png" alt="cebola">
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <h2>Deu bomm</h2>
+
+                </div>
+                <div class="mt-5 mb-5">
+                    <p>A Agreeks é foda bagarai deu buonn Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                        explicabo natus architecto, rerum nisi iusto distinctio, ullam earum nulla nihil aperiam qui
+                        suscipit voluptatibus mollitia totam, illum quos autem quidem! </p>
+                </div>
+
+            </div>
+            <div class="col-md-6 caixab">
+
+                <div>
+                    <!--Form-group Usuario/email-->
+
+                    <div class="form-group padd">
+                        <label for="exampleInputEmail1"></label>
+                        <h3>E-mail</h3>
+                        <div class="input-group input-group-lg">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="Exemplo@Email.com" [(ngModel)]='userLogin.email'>
+                        </div>
+
+                        <!--/Form-group Usuario/email-->
+
+                        <!--Form-group Senha-->
+                        <label for="exampleInputPassword1" aria-label="Largea"></label>
+                        <h3>Senha</h3>
+                        <div class="input-group input-group-lg">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="**************" [(ngModel)]='userLogin.senha'>
+                        </div>
+
+                        <!--/Form-group Senha-->
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <!--Button Entrar-->
+                    <div class="d-flex justify-content-center align-items-enter">
+                        <button type="submit" class="btn btn-outline-success w-100" (click)='entrar()'>Entrar</button>
+                    </div>
+
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <h4>Ainda não tem cadastro?</h4>
+
+                        <a class="nav-link" routerLink="/cadastro">Cadastrar</a>
+                    </div>
+                    <!--/Button Entrar-->
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <!--/Row principal-->
+    </div>
+    <!--/Container da pagina Login-->
+</div>

@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +13,18 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { DuvidasComponent } from './duvidas/duvidas.component';
+import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
+import { AlertaComponent } from './alerta/alerta.component';
+import { CarouselComponent } from './share-component/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +33,28 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
     FeedComponent,
     HomeComponent,
     FooterComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    LoginComponent,
+    CadastroComponent,
+    AlertaComponent,
+    BarraLateralComponent,
+    DeleteCategoriaComponent,
+    DeletePostagemComponent,
+    DuvidasComponent,
+    NavVerticalComponent,
+    PostCategoriaComponent,
+    PutCategoriaComponent,
+    PutPostagemComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
