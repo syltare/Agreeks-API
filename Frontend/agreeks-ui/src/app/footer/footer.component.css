@@ -19,7 +19,7 @@ ul.social-network {
   .faInstagram:hover{
   color: #C13584;
   }
-
+  @import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
   .faFacebook:hover{
       color: #0072b1;
 
@@ -27,4 +27,13 @@ ul.social-network {
   .ima{
     background: rgb(198,175,55);
     background: linear-gradient(180deg, rgba(198,175,55,0.8155637254901961) 11%, rgba(214,195,95,0.8155637254901961) 20%, rgba(175,150,21,0.9472163865546218) 65%);
+}
+
+.p2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.sobre-text-color{
+  color: #562D15;  
 }

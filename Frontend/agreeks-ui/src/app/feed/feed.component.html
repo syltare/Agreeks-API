@@ -1,4 +1,4 @@
-
+<div class="bg">
   <div class="container">
 
     <div class="row">
@@ -9,24 +9,23 @@
   
       <div class="col-md-8">
   
-        <h3 class="text-center mb-4 text-monospace">Faça uma pergunta!</h3>
+        <h3 class="text-center mb-4 sobre-text-color p2 font-weight-bold">Faça uma pergunta!</h3>
   
         <div class="form-group">
-          <label class="text-monospace" for="titulo">Título:</label>
+          <label class="sobre-text-color p2 font-weight-bold" for="titulo">Título:</label>
           <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo" [(ngModel)]='postagem.titulo'>
         </div>
   
         <div class="form-group">
-          <label class="text-monospace" for="post">Texto:</label>
+          <label class="sobre-text-color p2 font-weight-bold" for="post">Texto:</label>
           <textarea class="form-control" id="post" rows="3" placeholder="Digite aqui o seu texto" [(ngModel)]='postagem.post'></textarea>
-          <small class="text-danger">*Digite no minimo 5 caracteres</small>
         </div>
   
         <div class="row d-flex align-items-end">
   
           <div class="col-md-6">
             <div class="form-group m-0">
-              <label class="text-monospace" for="categoria">Escolha uma categoria ou <a routerLink='/cadastro-categoria'>Cadastre uma nova</a></label>
+              <label class="sobre-text-color p2" for="categoria">Escolha uma categoria ou <a routerLink='/cadastro-categoria'>Cadastre uma nova</a></label>
               <select name="categoria" id='categoria' class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategorias()'>
                 <option *ngFor='let item of listaCategorias' value={{item.id}}>
                   {{item.descricao}}
@@ -35,7 +34,7 @@
             </div>
           </div>
   
-          <div class="col-md-6 d-flex justify-content-end">
+          <div class="col-md-6 d-flex justify-content-end sobre-text-color p2 font-weight-bold">
             <button type="button" class="btn btn-outline-info w-25" (click)='publicar()'>Publicar</button>
           </div>
   
@@ -43,12 +42,12 @@
   
         <hr class="mt-5 mb-5">
   
-        <nav class="d-flex justify-content-center">
+        <nav class="d-flex justify-content-center sobre-text-color p2 font-weight-bold">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
               href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
   
-            <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
+            <a class="nav-item nav-link text-secondary sobre-text-color p2 font-weight-bold" id="nav-profile-tab" data-toggle="tab"
               href="#postagens-categorias" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por categoria</a>
           </div>
         </nav>
@@ -141,5 +140,8 @@
         </div>
   
       </div>
+      <hr>
     </div>
+</div>
+  
  

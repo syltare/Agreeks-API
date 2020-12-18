@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
+
 .ng-invalid.ng-touched{
     background-color: #f8d7da;
     border-color: #f5c6cb;
@@ -10,23 +12,17 @@
      background-color:#d4edda;
  }
 
- .p1 {
-    font-family: "Times New Roman", Times, serif;
-  }
-  
-  .p2 {
+ .p2 {
     font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  .p3 {
-    font-family: "Lucida Console", "Courier New", monospace;
-  }
- 
-  .p4 {
-    font-family: "Lucida Handwriting", "Brush Script MT";
-  }
+ }
 
-  .p5 {
-    font-family: "Copperplate", "Papyrus";
-  }
- 
+ .bg{   
+  background-color: #D1D996;
+  height: 770px;
+  
+}
+
+
+.sobre-text-color{
+    color: #562D15;
+}

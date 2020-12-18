@@ -1,0 +1,38 @@
+@import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
+
+.bg{   
+    background-color: #D1D996;
+   height: 770px;
+   
+    
+
+}
+
+.sobre-text-color{
+    color: #562D15;  
+}
+
+/* .caixa{
+
+    height: 400px;
+} */
+
+.p2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+  }
+  /* .caixap{
+    background-color:green;
+    width: 600px;
+    height: 600px;
+} 
+ .caixab{
+    
+    width: 600px;
+    height: 600px;
+    padding: 120px 20px 20px 60px;
+} */
+ .padd{
+    padding: 10px;
+} 
+

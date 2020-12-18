@@ -27,6 +27,11 @@
       </div>
       <div *ngIf='auth2.bntSair()'>
         <li class="nav-item">
+          <a class="nav-link text-uppercase menunav" routerLink="/feed">Feed</a>
+        </li>
+      </div>
+      <div *ngIf='auth2.bntSair()'>
+        <li class="nav-item">
           <a class="nav-link text-uppercase menunav" (click)='sair()'>Sair</a>
         </li>
       </div>

@@ -1,14 +1,15 @@
-<div class="container">
+<div class="bg">
+  <div class="container">
 
     <div class="row mt-5 mb-5">
         <div class="col-md-4">
           <app-barra-lateral></app-barra-lateral>
         </div>
         <div class="col-md-8">
-          <h3 class="text-center mb-4 text-monospace">Cadastro de um novo tema</h3>
+          <h3 class="text-center mb-4 sobre-text-color p2 font-weight-bold">Cadastro de um novo tema</h3>
   
           <div class="form-group">
-            <label class="text-monospace" for="texto">Nome do tema:</label>
+            <label class="sobre-text-color p2 font-weight-bold" for="texto">Nome do tema:</label>
             <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo tema" [(ngModel)]='categoria.descricao'>
         </div>
         <div class="row mb-5">
@@ -21,7 +22,7 @@
   
         <div class="row mt-5">
           <div class="col-md-12">
-            <h4 class="text-center text-monospace">Lista de categorias</h4>
+            <h4 class="text-center sobre-text-color p2 font-weight-bold">Lista de categorias</h4>
           </div>
         </div>
   
@@ -30,7 +31,7 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Descrição</th>
-              <th scope="col" class="d-flex justify-content-end">Modificações</th>
+              <th scope="col" class="d-flex justify-content-end sobre-text-color p2 font-weight-bold">Modificações</th>
             </tr>
           </thead>
           <tbody>
@@ -52,3 +53,6 @@
         </div>
     </div>
   </div>
+</div>
+
+
