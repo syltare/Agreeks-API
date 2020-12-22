@@ -1,4 +1,5 @@
 import {Categoria} from './Categoria';
+import { Usuario } from './Usuario';
 
 export class Postagem {
     public id: number
@@ -7,5 +8,7 @@ export class Postagem {
     public resposta: string
     public data: Date
     public categoria : Categoria
+    public usuario : Usuario
+
     
 }

@@ -13,6 +13,17 @@ public class UserLogin {
 	private String imagem;
 	
 	private String bio;
+	
+	private Postagem postagem;
+
+	
+	public Postagem getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(Postagem postagem) {
+		this.postagem = postagem;
+	}
 
 	public String getNome() {
 		return nome;

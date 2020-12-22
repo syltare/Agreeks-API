@@ -1,21 +1,22 @@
 package com.AgreeingUp.Agreeks.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name = "tb_postagem")
@@ -31,15 +32,34 @@ public class Postagem {
 	@Size(min = 10, max = 1000)
 	private String post;
 	
-	@Size(min = 10, max = 1000)
-	private String resposta;
+	@OneToMany
+	private List<Resposta> resposta;
 	
+	
+
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Categoria categoria;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
+	
+	
+	
+	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 	public Categoria getCategoria() {
 		return categoria;
@@ -73,14 +93,6 @@ public class Postagem {
 		this.post = post;
 	}
 
-	public String getResposta() {
-		return resposta;
-	}
-
-	public void setResposta(String resposta) {
-		this.resposta = resposta;
-	}
-
 	public Date getData() {
 		return data;
 	}
@@ -88,5 +100,14 @@ public class Postagem {
 	public void setData(Date data) {
 		this.data = data;
 	}
+
+	public List<Resposta> getResposta() {
+		return resposta;
+	}
+
+	public void setResposta(List<Resposta> resposta) {
+		this.resposta = resposta;
+	}
+	
 
 }

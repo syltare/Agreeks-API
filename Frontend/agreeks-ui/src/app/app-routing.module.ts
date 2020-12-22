@@ -12,6 +12,8 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { DuvidasComponent } from './duvidas/duvidas.component';
 import { Carousel2Component } from './carousel2/carousel2.component';
+import { PostRespostaComponent } from './post-resposta/post-resposta.component';
+
 
 
 
@@ -28,7 +30,9 @@ const routes: Routes = [
   { path: 'editar-categoria/:id', component: PutCategoriaComponent },
   { path: 'delete-categoria/:id', component: DeleteCategoriaComponent },
   { path: 'duvidas', component: DuvidasComponent },
-  { path: 'carousel', component: Carousel2Component }
+  { path: 'carousel', component: Carousel2Component },
+  { path: 'resposta-post/:id', component: PostRespostaComponent}
+ 
 ];
 
 @NgModule({

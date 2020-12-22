@@ -28,6 +28,7 @@ import { NavVerticalComponent } from './nav-vertical/nav-vertical.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { Carousel2Component } from './carousel2/carousel2.component';
 import { JumbotronComponent } from './share-component/jumbotron/jumbotron.component';
+import { PostRespostaComponent } from './post-resposta/post-resposta.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { JumbotronComponent } from './share-component/jumbotron/jumbotron.compon
     AlertasComponent,
     Carousel2Component,
     JumbotronComponent,
+    PostRespostaComponent,
     
   ],
   imports: [

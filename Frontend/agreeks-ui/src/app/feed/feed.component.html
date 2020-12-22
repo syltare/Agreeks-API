@@ -86,6 +86,11 @@
                         [routerLink]="['/delete-post', item.id]">
                           Apagar
                         </button>
+
+                        <button class="btn btn-outline-warning ml-3"
+                        [routerLink]="['/resposta-post', item.id]">
+                          Responder
+                        </button>
   
                       </div>
                     </div>
@@ -94,7 +99,11 @@
                   <div class="card-body">
                     <p class="card-text" aria-describedby="texto"> {{item.post}} </p>
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
+                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} Por {{nomeUser}}</small>
+                  </div>
+                  <div class="card mt-2" *ngFor='let itens of listaRespostas | orderBy : key : reverse'>
+                    <p class="card-text" aria-describedby="texto"> {{itens.resposta}} </p>
+                    
                   </div>
                 </div>
               </div>
@@ -130,6 +139,9 @@
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                       Postado em {{posta.data | date: 'dd/MM/yyyy'}} às {{posta.data | date:'HH:mm'}}</small>
                   </div>
+
+                  
+                  
 
                 </div>
               </div>
