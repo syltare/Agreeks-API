@@ -5,5 +5,5 @@ export class Categoria {
     public nomeCategoria: string
     public descricao: string
     public proposito: number
-    public postagem : Postagem
+    public postagem : Postagem[]
 }

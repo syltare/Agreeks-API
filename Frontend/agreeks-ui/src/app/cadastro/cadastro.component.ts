@@ -22,8 +22,9 @@ export class CadastroComponent implements OnInit {
     private alerta: AlertasService
   ) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(){
+    window.scroll(0,0)
+  
   }
 
   conferirSenha(event : any) {

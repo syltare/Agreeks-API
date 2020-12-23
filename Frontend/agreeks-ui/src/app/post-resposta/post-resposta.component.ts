@@ -18,7 +18,6 @@ import { RespostaService } from '../service/resposta.service';
 export class PostRespostaComponent implements OnInit {
   postagem: Postagem = new Postagem()
 
-
   categoria: Categoria = new Categoria
   listaCategorias: Categoria[]
   idCategoria: number
@@ -26,6 +25,7 @@ export class PostRespostaComponent implements OnInit {
 
   resposta: Resposta = new Resposta()
   listaResposta: Resposta[]
+  idResposta : number
 
 
   constructor(
@@ -40,10 +40,7 @@ export class PostRespostaComponent implements OnInit {
   ) { }
 
   ngOnInit() { 
-    if(environment.token == ''){
-      this.router.navigate(['/login'])
-    }
-    
+       
     this.idPost = this.route.snapshot.params["id"]
     this.findByIdPostagem(this.idPost)
   }
@@ -59,12 +56,17 @@ export class PostRespostaComponent implements OnInit {
     })
   }
   cadastrar(){
+    this.categoria.id = this.idCategoria
+    this.postagem.categoria = this.categoria
+    this.resposta.id = this.idResposta
+    this.postagem.resposta = this.resposta
     if(this.resposta.resposta == null){
       this.alerta.showAlertInfo('Preencha o campo de resposta para responder!')
     }
     else{
       this.respostaService.postRespostas(this.resposta).subscribe((resp: Resposta)=>{
         this.resposta = resp
+        
         this.router.navigate(['/feed'])
         this.alerta.showAlertSucess('Resposta Cadastrada com sucesso!')
       })

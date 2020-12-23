@@ -21,9 +21,11 @@ export class FeedComponent implements OnInit {
   reverse = true;
   
   nomeUser = environment.nome
-  // nomeUser = this.usuario
+  
+  
   
   usuario: Usuario = new Usuario()
+  idUsuario = environment.id
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
@@ -73,18 +75,28 @@ export class FeedComponent implements OnInit {
 
   publicar() {
     this.categoria.id = this.idCategoria
-    this.postagem.categoria = this.categoria
-   
+      this.postagem.categoria = this.categoria
+      
+      this.usuario.id = this.idUsuario
+      this.postagem.usuario =  this.usuario
 
     if (this.postagem.titulo == null || this.postagem.categoria == null || this.postagem.categoria == null) {
       this.alerta.showAlertInfo ('Preencha todos os campos antes de publicar!')
-    } else {
+    }
+     else {
+     
+     
+
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp
         this.postagem = new Postagem()
         
         this.alerta.showAlertSucess('Postagem realizada com sucesso!')
         this.findAllPostagens()
+      }, erro =>{
+        if ( erro.status == 500){
+          alert('Deu ruim pai')
+        }
       })
     }
   }

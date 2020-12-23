@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
+import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { PostagemService } from '../service/postagem.service';
@@ -14,6 +15,9 @@ import { PostagemService } from '../service/postagem.service';
 export class PutPostagemComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
+
+  usuario: Usuario = new Usuario()
+  
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]

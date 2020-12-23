@@ -8,5 +8,7 @@ export const environment = {
   imagem: '',
   bio:'',
   email : '',
+  id : 0,
+  resposta : ''
   
 };
