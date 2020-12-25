@@ -5,7 +5,9 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
 import { Resposta } from '../model/Resposta';
+import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { PostagemService } from '../service/postagem.service';
 import { RespostaService } from '../service/resposta.service';
@@ -16,22 +18,18 @@ import { RespostaService } from '../service/resposta.service';
   styleUrls: ['./post-resposta.component.css']
 })
 export class PostRespostaComponent implements OnInit {
-  postagem: Postagem = new Postagem()
-
-  categoria: Categoria = new Categoria
-  listaCategorias: Categoria[]
-  idCategoria: number
-  idPost: number
-
-  resposta: Resposta = new Resposta()
-  listaResposta: Resposta[]
+ 
+  resposta : Resposta = new Resposta()
   idResposta : number
-
+  
+  postagem : Postagem = new Postagem()
+  idPostagem = environment.postagem
+ 
 
   constructor(
-    private categoriaService : CategoriaService,
-    private postagemService: PostagemService,
+   
     private  respostaService: RespostaService,
+   
     private router:Router,
     private alerta:AlertasService,
     private route :ActivatedRoute
@@ -40,44 +38,39 @@ export class PostRespostaComponent implements OnInit {
   ) { }
 
   ngOnInit() { 
-       
-    this.idPost = this.route.snapshot.params["id"]
-    this.findByIdPostagem(this.idPost)
-  }
-  findByIdPostagem(id: number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
-      this.postagem = resp
-    })
-  }
+    window.scroll(0, 0)
+    let token = environment.token
 
-  findAllrespostas(){
-    this.respostaService.getAllRespostas().subscribe((resp: Resposta[])=>{
-      this.listaResposta = resp
-    })
-  }
-  cadastrar(){
-    this.categoria.id = this.idCategoria
-    this.postagem.categoria = this.categoria
-    this.resposta.id = this.idResposta
-    this.postagem.resposta = this.resposta
-    if(this.resposta.resposta == null){
-      this.alerta.showAlertInfo('Preencha o campo de resposta para responder!')
+    if (token == '') {
+      this.router.navigate(['/login'])
+      this.alerta.showAlertInfo('Necessário fazer login')
+
     }
-    else{
-      this.respostaService.postRespostas(this.resposta).subscribe((resp: Resposta)=>{
-        this.resposta = resp
+    
+    
+    
         
-        this.router.navigate(['/feed'])
-        this.alerta.showAlertSucess('Resposta Cadastrada com sucesso!')
-      })
-    }
   }
-  findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
-      this.categoria = resp;
-    })
-  }
+ 
+  cadastrar(){
+    this.resposta.id = this.idResposta
+    // this.postagem.id = this.idPostagem
+    this.resposta.postagem = this.postagem
 
 
+  
+ 
+     if(this.resposta.resposta == null){
+       this.alerta.showAlertInfo('Preencha o campo de resposta para responder!')
+     }
+     else{
+       this.respostaService.postRespostas(this.resposta).subscribe((resp: Resposta)=>{
+         this.resposta = resp
+         
+         this.router.navigate(['/feed'])
+         this.alerta.showAlertSucess('Resposta Cadastrada com sucesso!')
+       })
+     }
+   }}
 
-}
+

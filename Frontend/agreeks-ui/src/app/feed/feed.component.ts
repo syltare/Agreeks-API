@@ -21,6 +21,12 @@ export class FeedComponent implements OnInit {
   reverse = true;
   
   nomeUser = environment.nome
+  nomeResposta = environment.resposta
+  bio = environment.bio
+  
+  imagem = environment.imagem
+
+  id = environment.id
   
   
   
@@ -35,7 +41,7 @@ export class FeedComponent implements OnInit {
   resposta: Resposta = new Resposta()
   listaRespostas: Resposta[]
   idResposta: number
-  nomeResposta: string
+ 
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
@@ -65,6 +71,7 @@ export class FeedComponent implements OnInit {
 
     this.findAllPostagens()
     this.findAllCategorias()
+    this.findAllRespostas()
   }
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
@@ -76,6 +83,7 @@ export class FeedComponent implements OnInit {
   publicar() {
     this.categoria.id = this.idCategoria
       this.postagem.categoria = this.categoria
+      this.postagem.id = this.idPostagem
       
       this.usuario.id = this.idUsuario
       this.postagem.usuario =  this.usuario
@@ -86,7 +94,7 @@ export class FeedComponent implements OnInit {
      else {
      
      
-
+      console.log()
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp
         this.postagem = new Postagem()

@@ -1,7 +1,10 @@
 package com.AgreeingUp.Agreeks.model;
 
 public class UserLogin {
+	private int id;
 	
+
+
 	private String nome;
 	
 	private String email;
@@ -14,16 +17,14 @@ public class UserLogin {
 	
 	private String bio;
 	
-	private Postagem postagem;
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
 	
-	public Postagem getPostagem() {
-		return postagem;
-	}
-
-	public void setPostagem(Postagem postagem) {
-		this.postagem = postagem;
-	}
 
 	public String getNome() {
 		return nome;

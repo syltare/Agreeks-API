@@ -99,12 +99,13 @@
                   <div class="card-body">
                     <p class="card-text" aria-describedby="texto"> {{item.post}} </p>
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} Por {{nomeUser}}</small>
+                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} Por {{item.usuario.nome}}</small>
                   </div>
-                  <div class="card-body">
-                    <p class="card-text" aria-describedby="texto"> {{item.resposta.resposta}}aaaa </p>
+                  <!-- <p class="card-text" aria-describedby="texto"> {{item.resposta.resposta}} </p> -->
+<!--                  
+                    <p class="card-text" aria-describedby="texto"> {{nomeResposta}}aaaa </p> -->
                    
-                  </div>
+                 
                     
                   </div>
                 </div>

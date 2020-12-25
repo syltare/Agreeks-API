@@ -33,6 +33,7 @@ public class Postagem {
 	private String post;
 	
 	@OneToMany
+	@JsonIgnoreProperties("postagem")
 	private List<Resposta> resposta;
 	
 	

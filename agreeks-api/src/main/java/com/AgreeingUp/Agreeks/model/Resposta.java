@@ -11,6 +11,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "resposta")
 public class Resposta {
@@ -25,6 +27,7 @@ public class Resposta {
 	
 	
 	@ManyToOne
+	@JsonIgnoreProperties("resposta")
 	private Postagem postagem;
 
 
