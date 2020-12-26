@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
 import { Usuario } from '../model/Usuario';
@@ -34,9 +35,16 @@ export class PutPostagemComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
+    let token = environment.token
+
+    if (token == '') {
+      this.router.navigate(['/login'])
+      this.alert.showAlertInfo('Necessário fazer login')
+    }
 
     this.idPost = this.route.snapshot.params["id"]
     this.findByIdPostagem(this.idPost)
+    
 
     this.findAllCategorias()
   }

@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
 import { Resposta } from '../model/Resposta';
+import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
@@ -26,8 +27,7 @@ export class FeedComponent implements OnInit {
   
   imagem = environment.imagem
 
-  id = environment.id
-  
+  user : UserLogin = new UserLogin()
   
   
   usuario: Usuario = new Usuario()
@@ -71,7 +71,7 @@ export class FeedComponent implements OnInit {
 
     this.findAllPostagens()
     this.findAllCategorias()
-    this.findAllRespostas()
+    // this.findAllRespostas()
   }
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
@@ -146,5 +146,14 @@ findAllRespostas() {
   })
 
 }
+// responder(){
+//   // let item = this.listaPostagens
+//   this.router.navigate(['/resposta.id'])
+//   environment.id = this.user.id
+//   environment.idPost = this.postagem.id
+//   console.log(environment.id)
+//   console.log(environment.idPost)
+  
+// }
 
 }

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { faWindows } from '@fortawesome/free-brands-svg-icons';
+
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
 import { Resposta } from '../model/Resposta';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
-import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { PostagemService } from '../service/postagem.service';
 import { RespostaService } from '../service/resposta.service';
@@ -18,40 +17,59 @@ import { RespostaService } from '../service/resposta.service';
   styleUrls: ['./post-resposta.component.css']
 })
 export class PostRespostaComponent implements OnInit {
- 
+
   resposta : Resposta = new Resposta()
   idResposta : number
-  
-  postagem : Postagem = new Postagem()
-  idPostagem = environment.postagem
  
+  postagem: Postagem = new Postagem()
+
+  usuario: Usuario = new Usuario()
+  
+
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
+  idCategoria: number
+  idPost: number
 
   constructor(
-   
-    private  respostaService: RespostaService,
-   
-    private router:Router,
-    private alerta:AlertasService,
-    private route :ActivatedRoute
-
-
+    private categoriaService: CategoriaService,
+    private postagemService: PostagemService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private alert: AlertasService,
+    private respostaService : RespostaService
+    
   ) { }
 
-  ngOnInit() { 
-    window.scroll(0, 0)
+  ngOnInit() {
+    window.scroll(0,0)
     let token = environment.token
 
     if (token == '') {
       this.router.navigate(['/login'])
-      this.alerta.showAlertInfo('Necessário fazer login')
-
+      this.alert.showAlertInfo('Necessário fazer login')
     }
-    
-    
-    
-        
+
+    this.idPost = this.route.snapshot.params["id"]
+    this.findByIdPostagem(this.idPost)
+
+    this.findAllCategorias()
+
+    // let id = this.route.snapshot.params['id']
+    // this.findAllCategorias(id)
+
   }
- 
+
+    
+    
+  
+
+  findByIdPostagem(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
+    })
+  }
+
   cadastrar(){
     this.resposta.id = this.idResposta
     // this.postagem.id = this.idPostagem
@@ -61,16 +79,30 @@ export class PostRespostaComponent implements OnInit {
   
  
      if(this.resposta.resposta == null){
-       this.alerta.showAlertInfo('Preencha o campo de resposta para responder!')
+       this.alert.showAlertInfo('Preencha o campo de resposta para responder!')
      }
      else{
        this.respostaService.postRespostas(this.resposta).subscribe((resp: Resposta)=>{
          this.resposta = resp
          
          this.router.navigate(['/feed'])
-         this.alerta.showAlertSucess('Resposta Cadastrada com sucesso!')
+         this.alert.showAlertSucess('Resposta Cadastrada com sucesso!')
        })
      }
-   }}
+   }
 
+  findAllCategorias(){
+    this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
+      this.listaCategorias = resp
+    })
+  }
 
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+    })
+  }
+
+}
+
+  

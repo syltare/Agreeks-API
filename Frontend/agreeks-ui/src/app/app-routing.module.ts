@@ -25,13 +25,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'cadastro-categoria', component: PostCategoriaComponent },
-  { path: 'editar-post/:id', component: PutPostagemComponent },
-  { path: 'delete-post/:id', component: DeletePostagemComponent },
+  { path: 'put-postagem/:id', component: PutPostagemComponent },
+  { path: 'delete-postagem/:id', component: DeletePostagemComponent },
   { path: 'editar-categoria/:id', component: PutCategoriaComponent },
   { path: 'delete-categoria/:id', component: DeleteCategoriaComponent },
   { path: 'duvidas', component: DuvidasComponent },
   { path: 'carousel', component: Carousel2Component },
-  { path: 'resposta-post/:id', component: PostRespostaComponent}
+  { path: 'resposta/:id', component: PostRespostaComponent}
  
 ];
 

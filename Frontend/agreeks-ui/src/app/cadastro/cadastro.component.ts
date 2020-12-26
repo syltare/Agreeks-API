@@ -13,8 +13,8 @@ import { AuthService } from '../service/auth.service';
 export class CadastroComponent implements OnInit {
   usuario : Usuario = new Usuario()
   senha : string
-  nome : string
-  email : string
+  // nome : string
+  // email : string
   
   constructor(
     private authService : AuthService,

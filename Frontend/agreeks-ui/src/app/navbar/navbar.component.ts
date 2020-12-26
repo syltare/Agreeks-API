@@ -28,5 +28,10 @@ export class NavbarComponent implements OnInit {
   sair() {
     this.router.navigate(['/login'])
     environment.token = ''
+    environment.nome = ''
+    environment.email= ''
+    environment.bio = ''
+    environment.imagem = ''
+    environment.id = 0
   }
 }
