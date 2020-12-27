@@ -7,6 +7,7 @@ import { Resposta } from '../model/Resposta';
 import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { PostagemService } from '../service/postagem.service';
 import { RespostaService } from '../service/resposta.service';
@@ -53,22 +54,25 @@ export class FeedComponent implements OnInit {
     private postagemService: PostagemService,
     private categoriaService: CategoriaService,
     private alerta: AlertasService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
 
   ) { }
 
   ngOnInit() {
-    let token = environment.token
+    // let token = environment.token
 
-    if (token == '') {
-      this.router.navigate(['/login'])
-      this.alerta.showAlertInfo('Necessário fazer login')
+    // if (token == '') {
+    //   this.router.navigate(['/login'])
+    //   this.alerta.showAlertInfo('Necessário fazer login')
 
-    }
+      
+
+    // }
     
     
     window.scroll(0, 0)
-
+    // this.findByUser()
     this.findAllPostagens()
     this.findAllCategorias()
     // this.findAllRespostas()
@@ -146,14 +150,10 @@ findAllRespostas() {
   })
 
 }
-// responder(){
-//   // let item = this.listaPostagens
-//   this.router.navigate(['/resposta.id'])
-//   environment.id = this.user.id
-//   environment.idPost = this.postagem.id
-//   console.log(environment.id)
-//   console.log(environment.idPost)
-  
-// }
+findByUser(){
+  this.authService.getByUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+    this.usuario = resp
+  })
+}
 
 }

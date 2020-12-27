@@ -29,6 +29,7 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { Carousel2Component } from './carousel2/carousel2.component';
 import { JumbotronComponent } from './share-component/jumbotron/jumbotron.component';
 import { PostRespostaComponent } from './post-resposta/post-resposta.component';
+import { SidebarComponent } from './share-component/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { PostRespostaComponent } from './post-resposta/post-resposta.component';
     Carousel2Component,
     JumbotronComponent,
     PostRespostaComponent,
+    SidebarComponent,
     
   ],
   imports: [

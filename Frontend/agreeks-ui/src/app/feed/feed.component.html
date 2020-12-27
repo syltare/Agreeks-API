@@ -44,7 +44,7 @@
   
         <nav class="d-flex justify-content-center sobre-text-color p2 font-weight-bold">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
+            <a (click)='findByUser()' class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
               href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
   
             <a class="nav-item nav-link text-secondary sobre-text-color p2 font-weight-bold" id="nav-profile-tab" data-toggle="tab"
@@ -99,7 +99,7 @@
                   <div class="card-body">
                     <p class="card-text" aria-describedby="texto"> {{item.post}} </p>
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} Por {{item.usuario.nome}}</small>
+                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
                   </div>
                   <!-- <p class="card-text" aria-describedby="texto"> {{item.resposta.resposta}} </p> -->
 <!--                  

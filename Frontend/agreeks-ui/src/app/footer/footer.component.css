@@ -25,15 +25,13 @@ ul.social-network {
 
   }
   .ima{
-    background: rgb(198,175,55);
-    background: linear-gradient(180deg, rgba(198,175,55,0.8155637254901961) 11%, rgba(214,195,95,0.8155637254901961) 20%, rgba(175,150,21,0.9472163865546218) 65%);
-}
-
+    background-color: #084d2a;
+  }
 .p2 {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
 
 .sobre-text-color{
-  color: #562D15;  
+  color: #6bd624;  
 }
