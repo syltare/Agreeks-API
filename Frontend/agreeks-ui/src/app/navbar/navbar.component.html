@@ -15,22 +15,22 @@
 
   <div class="d-flex justify-content-end">
     <ul class="navbar-nav mr-auto">
-      <div *ngIf='auth2.btnLogin()'>
+      <div *ngIf='auth.btnLogin()'>
         <li class="nav-item">
           <a class="nav-link text-uppercase menunav" routerLink="/login">Login</a>
         </li>
       </div>
-      <div *ngIf='auth2.btnLogin()'>
+      <div *ngIf='auth.btnLogin()'>
         <li class="nav-item">
         <a class="nav-link text-uppercase menunav" routerLink="/cadastro">Cadastrar</a>
         </li>
       </div>
-      <div *ngIf='auth2.bntSair()'>
+      <div *ngIf='auth.bntSair()'>
         <li class="nav-item">
           <a class="nav-link text-uppercase menunav" routerLink="/feed">Feed</a>
         </li>
       </div>
-      <div *ngIf='auth2.bntSair()'>
+      <div *ngIf='auth.bntSair()'>
         <li class="nav-item">
           <a class="nav-link text-uppercase menunav" (click)='sair()'>Sair</a>
         </li>

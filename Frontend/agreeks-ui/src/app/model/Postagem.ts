@@ -10,7 +10,7 @@ export class Postagem {
     public data: Date
     public categoria : Categoria
     public usuario : Usuario
-    public resposta : Resposta
+    public resposta : Resposta[]
 
     
 }

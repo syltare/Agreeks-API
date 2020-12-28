@@ -60,20 +60,20 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // let token = environment.token
+    let token = environment.token
 
-    // if (token == '') {
-    //   this.router.navigate(['/login'])
-    //   this.alerta.showAlertInfo('Necessário fazer login')
+    if (token == '') {
+      this.router.navigate(['/login'])
+      this.alerta.showAlertInfo('Necessário fazer login')
 
       
 
-    // }
+    }
     
     
     window.scroll(0, 0)
     // this.findByUser()
-    this.findAllPostagens()
+    // this.findAllPostagens()
     this.findAllCategorias()
     // this.findAllRespostas()
   }
@@ -150,8 +150,8 @@ findAllRespostas() {
   })
 
 }
-findByUser(){
-  this.authService.getByUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+findByIdUsuario(){
+  this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
     this.usuario = resp
   })
 }

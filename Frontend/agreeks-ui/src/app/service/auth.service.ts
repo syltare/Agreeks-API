@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 import { Observable } from 'rxjs';
@@ -10,9 +10,10 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class AuthService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
+  token = {
+    headers : new HttpHeaders().set('Authorization', environment.token!)
+  }
 
   logar(userLogin: UserLogin) : Observable<UserLogin>{
     console.log(userLogin)
@@ -21,6 +22,9 @@ export class AuthService {
 
   cadastrar(usuario: Usuario) : Observable<Usuario>{
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario )
+  }
+  getByIdUsuario(id : number) : Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`,this.token) 
   }
 
   bntSair(){
@@ -42,7 +46,5 @@ export class AuthService {
 
     return ok
   }
-  getByUsuario(id : number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
-  }
+  
 }
