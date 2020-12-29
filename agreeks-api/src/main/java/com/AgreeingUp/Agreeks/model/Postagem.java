@@ -3,6 +3,7 @@ package com.AgreeingUp.Agreeks.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,7 +33,7 @@ public class Postagem {
 	@Size(min = 10, max = 1000)
 	private String post;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "postagem", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("postagem")
 	private List<Resposta> resposta;
 	

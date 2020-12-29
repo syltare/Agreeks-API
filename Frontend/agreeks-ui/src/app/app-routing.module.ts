@@ -13,6 +13,7 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
 import { DuvidasComponent } from './duvidas/duvidas.component';
 import { Carousel2Component } from './carousel2/carousel2.component';
 import { PostRespostaComponent } from './post-resposta/post-resposta.component';
+import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
 
 
 
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'delete-categoria/:id', component: DeleteCategoriaComponent },
   { path: 'duvidas', component: DuvidasComponent },
   { path: 'carousel', component: Carousel2Component },
-  { path: 'resposta/:id', component: PostRespostaComponent}
+  { path: 'resposta/:id', component: PostRespostaComponent},
+  { path: 'postagem-tela/:id', component: PostagemTelaComponent}
  
 ];
 

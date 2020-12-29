@@ -70,12 +70,12 @@
   
             <div class="row">
               <div class="col-md-12">
-  
-                <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                
+                <div class="card mt-5 " *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                   <div class="card-header">
                     <div class="row d-flex align-items-center">
                       <div class="col-md-8">
-                        <h5 class="card-tittle"> {{item.titulo}} </h5>
+                        <h3 class="card-tittle" [routerLink]="['/postagem-tela', item.id]" >  {{item.titulo}} </h3>
                         <small>Categoria: {{item.categoria.descricao}} </small>
                       </div>
                       <div class="col-md-4 d-flex justify-content-end">
@@ -104,12 +104,11 @@
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                       Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} Por: {{item.usuario.nome}}</small>
                   </div>
-                  <!-- <p class="card-text" aria-describedby="texto"> {{item.resposta.resposta}} </p> -->
-<!--                  
-                    <p class="card-text" aria-describedby="texto"> {{nomeResposta}}aaaa </p> -->
+             
                    
                  
                     
+                 
                   </div>
                 </div>
               </div>

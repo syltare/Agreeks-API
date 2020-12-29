@@ -10,6 +10,7 @@ export const environment = {
   email : '',
   id : 0,
   idPost : 0,
+  idCategoria : 0,
   resposta : '',
   postagem : ''
   

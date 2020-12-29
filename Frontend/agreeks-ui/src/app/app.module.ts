@@ -30,6 +30,7 @@ import { Carousel2Component } from './carousel2/carousel2.component';
 import { JumbotronComponent } from './share-component/jumbotron/jumbotron.component';
 import { PostRespostaComponent } from './post-resposta/post-resposta.component';
 import { SidebarComponent } from './share-component/sidebar/sidebar.component';
+import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
 
 
 @NgModule({
@@ -57,6 +58,8 @@ import { SidebarComponent } from './share-component/sidebar/sidebar.component';
     JumbotronComponent,
     PostRespostaComponent,
     SidebarComponent,
+    PostagemTelaComponent,
+    
     
   ],
   imports: [

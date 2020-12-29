@@ -20,8 +20,10 @@ export class PostRespostaComponent implements OnInit {
 
   resposta : Resposta = new Resposta()
   idResposta : number
+  listaRespostas: Resposta[]
  
   postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
 
   usuario: Usuario = new Usuario()
   
@@ -54,7 +56,8 @@ export class PostRespostaComponent implements OnInit {
     this.findByIdPostagem(this.idPost)
 
     this.findAllCategorias()
-
+    
+    this.findAllRespostas()
     // let id = this.route.snapshot.params['id']
     // this.findAllCategorias(id)
 
@@ -100,6 +103,17 @@ export class PostRespostaComponent implements OnInit {
   findByIdCategoria() {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp;
+    })
+  }
+  findAllRespostas() {
+    this.respostaService.getAllRespostas().subscribe((resp: Resposta[]) => {
+      this.listaRespostas = resp
+    })
+  
+  }
+  findByIdRespostas(){
+    this.respostaService.getByIdRespostas(this.idResposta).subscribe((resp : Resposta)=>{
+      this.resposta = resp
     })
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
@@ -55,7 +55,8 @@ export class FeedComponent implements OnInit {
     private categoriaService: CategoriaService,
     private alerta: AlertasService,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private route: ActivatedRoute
 
   ) { }
 
@@ -73,7 +74,7 @@ export class FeedComponent implements OnInit {
     
     window.scroll(0, 0)
     // this.findByUser()
-    // this.findAllPostagens()
+    this.findAllPostagens()
     this.findAllCategorias()
     // this.findAllRespostas()
   }
@@ -124,6 +125,11 @@ findByIdCategorias(){
     this.categoria = resp
   })
 }
+findByIdRespostas(){
+  this.respostaService.getByIdRespostas(this.idResposta).subscribe((resp : Resposta)=>{
+    this.resposta = resp
+  })
+}
 
 findByTituloPostagem() {
   if (this.titulo === '') {
@@ -151,9 +157,23 @@ findAllRespostas() {
 
 }
 findByIdUsuario(){
+  
   this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
     this.usuario = resp
+    this.usuario.id = this.idUsuario
   })
 }
+// public novaEstrutura = [];
+
+// this.listaRespostas.forEach(postagem => {
+//     postagem.resposta.forEach(resposta => {
+//         this.novaEstrutura.push(
+//             {
+//                 postagem: postagem.category_name,
+//                 resposta: resposta.sub_category_name
+//             }
+//         );
+//     })
+// });
 
 }

@@ -12,7 +12,7 @@ export class CategoriaService {
   constructor(private http: HttpClient) { }
 
   token = {
-    headers : new HttpHeaders().set('Authorization', environment.token!)
+    headers : new HttpHeaders().set('Authorization', environment.token)
   }
   getAllCategorias() : Observable<Categoria[]>{
     return this.http.get<Categoria[]>('http://localhost:8080/categoria', this.token)
