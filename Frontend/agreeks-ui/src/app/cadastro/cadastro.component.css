@@ -1,7 +1,7 @@
 @import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
 
 .ng-invalid.ng-touched{
-    background-color: #f8d7da;
+    background-color: #ffffff;
     border-color: #f5c6cb;
      
  }
@@ -17,7 +17,7 @@
  }
 
  .bg{   
-  background-color: #D1D996;
+  background-color: #ffffff;
   height: 770px;
   
 }
