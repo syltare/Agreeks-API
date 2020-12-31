@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { environment } from 'src/environments/environment.prod';
+// import { threadId } from 'worker_threads';
 import { Categoria } from '../model/Categoria';
 import { Postagem } from '../model/Postagem';
 import { Resposta } from '../model/Resposta';
@@ -26,6 +27,7 @@ export class PostRespostaComponent implements OnInit {
   listaPostagens: Postagem[]
 
   usuario: Usuario = new Usuario()
+  
   
 
   categoria: Categoria = new Categoria()
@@ -54,12 +56,14 @@ export class PostRespostaComponent implements OnInit {
 
     this.idPost = this.route.snapshot.params["id"]
     this.findByIdPostagem(this.idPost)
+    
+    
 
     this.findAllCategorias()
     
     this.findAllRespostas()
-    // let id = this.route.snapshot.params['id']
-    // this.findAllCategorias(id)
+    
+    
 
   }
 
@@ -74,21 +78,15 @@ export class PostRespostaComponent implements OnInit {
   }
 
   cadastrar(){
-    this.resposta.id = this.idResposta
-    // this.postagem.id = this.idPostagem
-    this.resposta.postagem = this.postagem
-
-
-  
- 
+        this.resposta.postagem = this.postagem
      if(this.resposta.resposta == null){
        this.alert.showAlertInfo('Preencha o campo de resposta para responder!')
      }
      else{
        this.respostaService.postRespostas(this.resposta).subscribe((resp: Resposta)=>{
          this.resposta = resp
-         
-         this.router.navigate(['/feed'])
+         this.findAllRespostas()
+       
          this.alert.showAlertSucess('Resposta Cadastrada com sucesso!')
        })
      }

@@ -44,6 +44,7 @@ export class PostCategoriaComponent implements OnInit {
         this.categoria = resp
         this.router.navigate(['/feed'])
         this.alerta.showAlertSucess('Tema cadastrado com sucesso!')
+        
       })
     }
   }

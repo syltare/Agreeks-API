@@ -22,6 +22,7 @@ export class FeedComponent implements OnInit {
   key = 'data'
   reverse = true;
   
+  id = environment.id
   nomeUser = environment.nome
   nomeResposta = environment.resposta
   bio = environment.bio
@@ -163,17 +164,17 @@ findByIdUsuario(){
     this.usuario.id = this.idUsuario
   })
 }
-// public novaEstrutura = [];
-
-// this.listaRespostas.forEach(postagem => {
-//     postagem.resposta.forEach(resposta => {
-//         this.novaEstrutura.push(
-//             {
-//                 postagem: postagem.category_name,
-//                 resposta: resposta.sub_category_name
-//             }
-//         );
-//     })
-// });
+cadastrarCategoria() {
+  if (this.categoria.descricao == null) {
+    this.alerta.showAlertInfo('Preencha o campo de nome do tema corretamente')
+  } else {
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) =>{
+      this.categoria = resp
+      
+      this.alerta.showAlertSucess('Tema cadastrado com sucesso!')
+      this.findAllCategorias()
+    })
+  }
+}
 
 }

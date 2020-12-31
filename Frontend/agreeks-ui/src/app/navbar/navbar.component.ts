@@ -15,7 +15,7 @@ import { PostagemService } from '../service/postagem.service';
 })
 export class NavbarComponent implements OnInit {
   
-
+ id = environment.id
   constructor(
     private router: Router,
     public auth: AuthService
@@ -34,5 +34,11 @@ export class NavbarComponent implements OnInit {
     environment.bio = ''
     environment.imagem = ''
     environment.id = 0
+  }
+  config(){
+    console.log(environment.id)
+    console.log(environment.token)
+    console.log(environment.nome)
+    this.router.navigate(['/config'])
   }
 }

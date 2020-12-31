@@ -31,6 +31,8 @@ import { JumbotronComponent } from './share-component/jumbotron/jumbotron.compon
 import { PostRespostaComponent } from './post-resposta/post-resposta.component';
 import { SidebarComponent } from './share-component/sidebar/sidebar.component';
 import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
+import { ConfigComponent } from './configuracoes/config/config.component';
+import { ContaComponent } from './configuracoes/conta/conta.component';
 
 
 @NgModule({
@@ -59,6 +61,8 @@ import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
     PostRespostaComponent,
     SidebarComponent,
     PostagemTelaComponent,
+    ConfigComponent,
+    ContaComponent,
     
     
   ],

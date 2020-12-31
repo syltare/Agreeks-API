@@ -21,7 +21,9 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router
   ) { }
-
+  
+  ngOnInit() {
+  }
 
   entrar() {
     
@@ -29,12 +31,13 @@ export class LoginComponent implements OnInit {
       this.userLogin = resp
       environment.token = this.userLogin.token
       environment.nome = this.userLogin.nome
-      environment.imagem = this.userLogin.imagem
+      // environment.imagem = this.userLogin.imagem
       environment.bio = this.userLogin.bio
       environment.id = this.userLogin.id
-      console.log(environment.token)
-      console.log(environment.nome)
-     console.log(environment.id)
+      // console.log(environment.id)
+      // console.log(environment.token)
+      // console.log(environment.nome)
+   
     //  console.log(environment.email)
     //  console.log(environment.bio)
     
@@ -50,6 +53,4 @@ export class LoginComponent implements OnInit {
   }
 
   
-  ngOnInit() {
-  }
 }

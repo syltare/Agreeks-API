@@ -12,7 +12,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
   token = {
-    headers : new HttpHeaders().set('Authorization', environment.token!)
+    headers : new HttpHeaders().set('Authorization', environment.token)
   }
 
   logar(userLogin: UserLogin) : Observable<UserLogin>{

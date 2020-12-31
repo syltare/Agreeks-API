@@ -14,6 +14,7 @@ import { DuvidasComponent } from './duvidas/duvidas.component';
 import { Carousel2Component } from './carousel2/carousel2.component';
 import { PostRespostaComponent } from './post-resposta/post-resposta.component';
 import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
+import { ConfigComponent } from './configuracoes/config/config.component';
 
 
 
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'duvidas', component: DuvidasComponent },
   { path: 'carousel', component: Carousel2Component },
   { path: 'resposta/:id', component: PostRespostaComponent},
-  { path: 'postagem-tela/:id', component: PostagemTelaComponent}
+  { path: 'postagem-tela/:id', component: PostagemTelaComponent},
+  { path: 'config/:id', component: ConfigComponent}
  
 ];
 
