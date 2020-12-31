@@ -1,3 +1,4 @@
+import { CoreEnvironment } from '@angular/compiler/src/compiler_facade_interface';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
@@ -18,10 +19,13 @@ export class ConfigComponent implements OnInit {
   
   usuario : Usuario = new Usuario()
   idUser: number
+  confirmarSenha: string
+  tipoUsuario: string
+  
 
   categoria : Categoria = new Categoria()
 
-  id  = environment.id
+ 
 
 
 
@@ -43,19 +47,12 @@ export class ConfigComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    this.findAllCategorias()
-    this.findAllPostagens()
-    // this.findByIdUser(this.id)
-    let token = environment.token
-
-    if (token == '') {
-      this.router.navigate(['/login'])
-      this.alerta.showAlertInfo('Necessário fazer login')
-      
-
+    if (environment.token == '') {
+      this.router.navigate(['/entrar'])
     }
-    // this.idUser = this.route.snapshot.params['id']
-    // this.findByIdUser(this.idUser)
+
+    this.idUser = this.route.snapshot.params['id']
+    this.findByIdUser(this.idUser)
 }
 
 findAllCategorias(){
@@ -69,10 +66,10 @@ findAllPostagens() {
   })
 
 }
-  // findByIdUser(id : number){
-  //   this.authService.getByIdUsuario(id).subscribe((resp: Usuario) =>{
-  //     this.usuario = resp
-  //   })
-  // }
+findByIdUser(id: number) {
+  this.authService.getByIdUsuario(id).subscribe((resp: Usuario) => {
+    this.usuario = resp
+  })
+}
 
 }

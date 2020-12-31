@@ -22,7 +22,7 @@ export class FeedComponent implements OnInit {
   key = 'data'
   reverse = true;
   
-  id = environment.id
+ 
   nomeUser = environment.nome
   nomeResposta = environment.resposta
   bio = environment.bio
@@ -30,7 +30,7 @@ export class FeedComponent implements OnInit {
   imagem = environment.imagem
 
   user : UserLogin = new UserLogin()
-  
+  idUser = environment.id
   
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
@@ -62,22 +62,18 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let token = environment.token
+    window.scroll(0, 0)
 
-    if (token == '') {
+    if (environment.token == '') {
       this.router.navigate(['/login'])
       this.alerta.showAlertInfo('Necessário fazer login')
 
-      
-
     }
-    
-    
-    window.scroll(0, 0)
-    // this.findByUser()
+        
+  
     this.findAllPostagens()
-    this.findAllCategorias()
-    // this.findAllRespostas()
+   this.findAllCategorias()
+    
   }
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {

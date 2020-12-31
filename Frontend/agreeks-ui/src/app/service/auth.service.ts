@@ -11,9 +11,9 @@ import { environment } from 'src/environments/environment.prod';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  token = {
-    headers : new HttpHeaders().set('Authorization', environment.token)
-  }
+  // token = {
+  //   headers : new HttpHeaders().set('Authorization', environment.token)
+  // }
 
   logar(userLogin: UserLogin) : Observable<UserLogin>{
     console.log(userLogin)
@@ -24,7 +24,7 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario )
   }
   getByIdUsuario(id : number) : Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`,this.token) 
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
   }
 
   bntSair(){
@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   btnLogin(){
-    let ok = false
+    let ok : boolean = false
     let token = environment.token
     if(token == ''){
       ok = true
