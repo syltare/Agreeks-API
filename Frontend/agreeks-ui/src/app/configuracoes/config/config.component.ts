@@ -53,6 +53,8 @@ export class ConfigComponent implements OnInit {
 
     this.idUser = this.route.snapshot.params['id']
     this.findByIdUser(this.idUser)
+    this.findAllCategorias()
+    this.findAllPostagens()
 }
 
 findAllCategorias(){
