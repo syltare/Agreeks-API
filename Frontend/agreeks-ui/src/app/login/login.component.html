@@ -1,4 +1,4 @@
-<div class="bg">
+
 <!--Container da pagina Login-->
 
     <div class="container ">
@@ -6,8 +6,8 @@
 
 
         <!--Row principal-->
-        <div class="row  ">
-            <div class="col-md-6 ">
+        <div class="row mb-3 mt-3 ">
+            <div class="col-md-6 padd ">
                 <div class="d-flex justify-content-center">
                     <img src="/assets/img/logo2.png" alt="cebola">
                 </div>
@@ -21,44 +21,38 @@
 
 
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6 padd">
+                
+                
 
                 <div>
                     <!--Form-group Usuario/email-->
 
-                    <div class="form-group padd sobre-text-color">
-                        <label for="exampleInputEmail1"></label>
-                        <h3>E-mail</h3>
+
+                    <div class="card text-white  " style="max-width: 18rem;">
+                        
+                        <div class="card-body">
+                         
+                          <p class="card-text">
+                              
+                    <div class="form-group  sobre-text-color">
+                        
                         <div class="input-group input-group-lg">
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                placeholder="Exemplo@Email.com" [(ngModel)]='userLogin.email'>
+                                placeholder="E-mail" [(ngModel)]='userLogin.email'>
                         </div>
 
                         <!--/Form-group Usuario/email-->
-
-                 
-
-
-
                         <!--Form-group Senha-->
-                        <label for="exampleInputPassword1" aria-label="Larger"></label>
-                        <h3>Senha</h3>
-                        <div class="input-group input-group-lg">
+                       
+                        <div class="input-group input-group-lg mb-2 mt-2">
                             <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="**************" [(ngModel)]='userLogin.senha'>
+                                placeholder="Senha" [(ngModel)]='userLogin.senha'>
                         </div>
 
                         <!--/Form-group Senha-->
 
                     </div>
-
-
-
-
-
-
-
-
                     <!--Button Entrar-->
                     <div class="d-flex justify-content-center align-items-enter">
                         <button type="submit" class="btn btn-outline-success w-100" (click)='entrar()'>Entrar</button>
@@ -71,10 +65,15 @@
                     <!--/Button Entrar-->
                 </div>
 
+
+                        </div>
+
+
+
             </div>
 
 
-
+</div>
 
         </div>
         <!--/Row principal-->
