@@ -11,7 +11,7 @@
 
    
 .parallax {
-    background-image: url('https://i.ytimg.com/vi/_HvBwdgrHCE/maxresdefault.jpg');
+    background-image: url('/assets/img/home.png');
   
     min-height: 500px;
   
@@ -19,4 +19,21 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .img-300 {
+      width: 250px;
+  }
+
+  .hr-color {
+      background-color: turquoise;
+  }
+
+  .img-border {
+      width: 150px;
+      border-radius: 75%;
+  }
+
+  .img-wallpaper {
+      width: 100px;
   }

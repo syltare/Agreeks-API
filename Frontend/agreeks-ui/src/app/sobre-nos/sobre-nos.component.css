@@ -2,7 +2,7 @@
 
 
 .faGithub, .faLinkedin{
-    color: #9CA651
+    color: #2D7345;
 }
 
 .faLinkedin:hover{
@@ -24,17 +24,44 @@ color: #182C2D;
 } 
 
 a:link {
-  color: #585932
+  color: #2D7345;
 }
    
 a:hover {
-  color: #232226
+  color: #2D7345;
 }
 
 .sobre-text-color{
-    color: #562D15
+    color: black
 }
 
 .bg{
-    background-color: #D1D996
+    background-image: url(/assets/img/fundo.jpg);
+    background-repeat:no-repeat;
+    
+}
+
+.bg-texto {
+  background-color: white;
+  opacity: 0.7;
+}
+
+.hr-color {
+  background-color: white;
+}
+
+.hr-cor {
+  background-color: turquoise;
+}
+
+.text-card {
+  color: white;
+}
+
+.bg-dev {
+  background-image: url(/assets/img/fundo-natureza.jpg);
+}
+
+.hr-color-dev {
+  background-color:#177F02;
 }

@@ -1,48 +1,30 @@
 <div class="bg">
 <!--Container da pagina Login-->
 
-    <div class="container ">
-
-
-
         <!--Row principal-->
-        <div class="row mb-5 mt-5 ">
-            <div class="col-md-6 ">
-                <div class="d-flex justify-content-center">
-                    <img src="/assets/img/logo2.png" alt="cebola">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="img-login">
                 </div>
-                <div class="d-flex justify-content-center align-items-center sobre-text-color p2 text-justify">
-                    <h2>Seja bem Vinde!</h2>
+            </div>            
 
-                </div>
-                <div class="mt-5 mb-5 sobre-text-color p2 text-justify">
-                    <p>Temos como objetivo conectar os pequenos agricultores, com profissionais técnicos da agricultura, de maneira gratuita, a fim de otimizar sua produção e tornar mais acessível a produção de alimentos de qualidade  </p>
-                </div>
-
-
-            </div>
-            <div class="col-md-6 ">
-
+            <div class="col-md-4 align-items-center">
                 <div>
                     <!--Form-group Usuario/email-->
-
-                    <div class="form-group padd sobre-text-color">
+                    <h1 class="text-center font-weight-bold pt-5 text-uppercase">Login</h1>
+                    
+                    <div class="form-group sobre-text-color">
                         <label for="exampleInputEmail1"></label>
-                        <h3>E-mail</h3>
+                        <h3 class="h3-cad">Email</h3>
                         <div class="input-group input-group-lg">
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                placeholder="Exemplo@Email.com" [(ngModel)]='userLogin.email'>
+                                placeholder="exemplo@email.com" [(ngModel)]='userLogin.email'>
                         </div>
 
                         <!--/Form-group Usuario/email-->
-
-                 
-
-
-
                         <!--Form-group Senha-->
-                        <label for="exampleInputPassword1" aria-label="Larger"></label>
-                        <h3>Senha</h3>
+                        <label for="exampleInputPassword1"></label>
+                        <h3 class="h3-cad">Senha</h3>
                         <div class="input-group input-group-lg">
                             <input type="password" class="form-control" id="exampleInputPassword1"
                                 placeholder="**************" [(ngModel)]='userLogin.senha'>
@@ -53,21 +35,16 @@
                     </div>
 
 
-
-
-
-
-
-
                     <!--Button Entrar-->
                     <div class="d-flex justify-content-center align-items-enter">
-                        <button type="submit" class="btn btn-outline-success w-100" (click)='entrar()'>Entrar</button>
+                        <button type="submit" class="btn btn-primary-login w-50 mt-1 mb-1" (click)='entrar()'>Entrar</button>
                     </div>
 
-                    <hr>
-                    <h3 class="sobre-text-color p2"> Ainda não é cadastrado?</h3>
-                   <div class="d-flex justify-content-center align-items-enter">
-                        <button type="submit" class="btn btn-outline-primary w-100 nav-link text-uppercase menunav" routerLink="/cadastro">Cadastre-se</button>
+                    <hr class="hr-color">
+
+                    <h3 class="sobre-text-color p2 text-center"> Ainda não é cadastrado?</h3>
+                    <div class="d-flex justify-content-center align-items-enter">
+                        <button type="submit" class="btn btn-primary-cadastro w-50 mt-1 mb-1" routerLink="/cadastro">Cadastre-se</button>
                     <!--/Button Entrar-->
                 </div>
 

@@ -1,7 +1,8 @@
 @import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
 
-.sobre-text-color{
-    color: #562D15;  
+.bg-color{
+    background-image: url(https://image.freepik.com/vetores-gratis/folhas-de-palmeira-topicos-no-padrao-sem-emenda-para-textura-de-tecido-ilustracao-vetorial_1182-1327.jpg);  
+    opacity: 0.5;
 }
 
 .p2 {
