@@ -81,14 +81,37 @@
                     <th scope="row">{{item.id}}</th>
                     <td>{{item.descricao}}</td>
                       <td class="d-flex justify-content-end">
-                        <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-categoria', item.id]" >Editar</a>
+                        <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#ExemploModalCentralizado"(click)='findByIdCategorias()'>Editar</a>
+                        <!-- Modal -->
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group ">
+          <label for="titulo sobre-text-color p2">Nome do tema:</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo" [(ngModel)]="item.descricao">
+          {{item.descricao}}
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-outline-info w-25" data-dismiss="modal" (click)="salvar()">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
                         <a class="btn btn-outline-danger" [routerLink]="['/delete-categoria', item.id]" >Apagar</a>
+                        
                       </td>
-        
-        
                   </tr>
-        
-                </tbody>
+                        </tbody>
               </table>
 </div>
         </div>

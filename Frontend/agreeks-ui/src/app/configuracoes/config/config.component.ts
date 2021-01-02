@@ -24,7 +24,7 @@ export class ConfigComponent implements OnInit {
   
 
   categoria : Categoria = new Categoria()
-
+  idCategoria : number
  
 
 
@@ -71,6 +71,25 @@ findAllPostagens() {
 findByIdUser(id: number) {
   this.authService.getByIdUsuario(id).subscribe((resp: Usuario) => {
     this.usuario = resp
+  })
+}
+salvar() {
+  this.categoria.id = this.idCategoria
+  this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
+    this.categoria = resp
+    this.alerta.showAlertSucess('Tema atualizado com sucesso!')
+    this.findAllCategorias()
+  })
+}
+findByIdCategorias(){
+  this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp : Categoria)=>{
+    this.categoria = resp
+  })
+}
+btnSim() {
+  this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
+    this.router.navigate(['/cadastro-tema'])
+    this.alerta.showAlertSucess('Tema apagado com sucesso!')
   })
 }
 

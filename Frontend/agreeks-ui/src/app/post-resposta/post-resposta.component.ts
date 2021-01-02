@@ -24,7 +24,8 @@ export class PostRespostaComponent implements OnInit {
   listaRespostas: Resposta[]
  
   postagem: Postagem = new Postagem()
-  listaPostagens: Postagem[]
+  listaPostagens: Postagem
+  postResposta: number
 
   usuario: Usuario = new Usuario()
   
@@ -64,6 +65,7 @@ export class PostRespostaComponent implements OnInit {
     this.findAllRespostas()
     
     
+    
 
   }
 
@@ -72,7 +74,7 @@ export class PostRespostaComponent implements OnInit {
   
 
   findByIdPostagem(id: number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+    this.postagemService.getByIdPostagem(this.idPost).subscribe((resp: Postagem) => {
       this.postagem = resp
     })
   }
