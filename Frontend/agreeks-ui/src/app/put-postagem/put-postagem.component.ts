@@ -18,6 +18,7 @@ export class PutPostagemComponent implements OnInit {
   postagem: Postagem = new Postagem()
 
   usuario: Usuario = new Usuario()
+  id = environment.id
   
 
   categoria: Categoria = new Categoria()

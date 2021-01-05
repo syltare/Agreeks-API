@@ -8,6 +8,7 @@ import { Postagem } from '../model/Postagem';
 import { Resposta } from '../model/Resposta';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { PostagemService } from '../service/postagem.service';
 import { RespostaService } from '../service/resposta.service';
@@ -37,6 +38,7 @@ export class PostRespostaComponent implements OnInit {
   idPost: number
 
   constructor(
+    
     private categoriaService: CategoriaService,
     private postagemService: PostagemService,
     private router: Router,
@@ -87,9 +89,10 @@ export class PostRespostaComponent implements OnInit {
      else{
        this.respostaService.postRespostas(this.resposta).subscribe((resp: Resposta)=>{
          this.resposta = resp
-         this.findAllRespostas()
+         
        
          this.alert.showAlertSucess('Resposta Cadastrada com sucesso!')
+         this.findAllRespostas()
        })
      }
    }

@@ -29,8 +29,8 @@ export class FeedComponent implements OnInit {
   
   imagem = environment.imagem
 
-  user : UserLogin = new UserLogin()
-  idUser = environment.id
+  // user : UserLogin = new UserLogin()
+  // idUser = environment.id
   
   usuario: Usuario = new Usuario()
   idUsuario = environment.id

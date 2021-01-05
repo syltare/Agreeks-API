@@ -18,12 +18,19 @@ import { environment } from 'src/environments/environment.prod';
 export class ConfigComponent implements OnInit {
   
   usuario : Usuario = new Usuario()
+  id = environment.id
+  nome = environment.nome
+  email = environment.email
+  bio = environment.bio
+  imagem = environment.imagem
+
   idUser: number
   confirmarSenha: string
   tipoUsuario: string
   
 
   categoria : Categoria = new Categoria()
+  descricao : string
   idCategoria : number
  
 

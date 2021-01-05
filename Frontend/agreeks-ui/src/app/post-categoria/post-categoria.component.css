@@ -10,6 +10,8 @@
     color: #562D15;
 }
 
-.bg {
-    background-color: #D1D996;
+.bg{
+    background-image: url(/assets/img/fundo.jpg);
+    background-repeat:no-repeat;
+    
 }

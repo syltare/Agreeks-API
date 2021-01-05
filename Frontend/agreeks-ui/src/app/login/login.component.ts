@@ -31,15 +31,18 @@ export class LoginComponent implements OnInit {
       this.userLogin = resp
       environment.token = this.userLogin.token
       environment.nome = this.userLogin.nome
-      // environment.imagem = this.userLogin.imagem
+      environment.imagem = this.userLogin.imagem
+      environment.email = this.userLogin.email
       environment.bio = this.userLogin.bio
       environment.id = this.userLogin.id
       console.log(environment.id)
       console.log(environment.token)
       console.log(environment.nome)
+      console.log(environment.email)
+      console.log(environment.imagem)
    
-    //  console.log(environment.email)
-    //  console.log(environment.bio)
+    
+     console.log(environment.bio)
     
      
      

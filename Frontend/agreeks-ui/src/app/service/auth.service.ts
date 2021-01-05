@@ -11,19 +11,20 @@ import { environment } from 'src/environments/environment.prod';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  // token = {
-  //   headers : new HttpHeaders().set('Authorization', environment.token)
-  // }
+  token = {
+    headers : new HttpHeaders().set('Authorization', environment.token)
+  }
 
   logar(userLogin: UserLogin) : Observable<UserLogin>{
     console.log(userLogin)
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin )
+    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin, this.token)
   }
 
   cadastrar(usuario: Usuario) : Observable<Usuario>{
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario )
   }
   getByIdUsuario(id : number) : Observable<Usuario>{
+    console.log(this.token)
     return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
   }
 

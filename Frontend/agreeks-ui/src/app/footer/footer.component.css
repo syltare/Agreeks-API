@@ -1,37 +1,37 @@
 ul.social-network {
-    list-style: none;
-    display: inline;
-  
-    padding: 0;
-  }
-  
-  ul.social-network li {
-    display: inline;
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .faFacebook, .faInstagram{
-      color: white
-  } 
+  list-style: none;
+  display: inline;
 
-  
-  .faInstagram:hover{
-  color: #C13584;
-  }
-  @import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
-  .faFacebook:hover{
-      color: #0072b1;
+  padding: 0;
+}
 
-  }
-  .ima{
-    background-color: #084d2a;
-  }
+ul.social-network li {
+  display: inline;
+  margin: 0;
+  padding: 5px;
+}
+
+.faFacebook, .faInstagram{
+    color: white
+} 
+
+
+.faInstagram:hover{
+color: #C13584;
+}
+@import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
+.faFacebook:hover{
+    color: #0072b1;
+
+}
+.ima{
+  background-color: #2D7345;
+}
 .p2 {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 20px;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 20px;
 }
 
 .sobre-text-color{
-  color: #6bd624;  
+color: white;  
 }

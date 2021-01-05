@@ -15,6 +15,8 @@ import { Carousel2Component } from './carousel2/carousel2.component';
 import { PostRespostaComponent } from './post-resposta/post-resposta.component';
 import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
 import { ConfigComponent } from './configuracoes/config/config.component';
+import { ContaComponent } from './configuracoes/conta/conta.component';
+import { CardhomeComponent } from './share-component/cardhome/cardhome.component';
 
 
 
@@ -35,7 +37,9 @@ const routes: Routes = [
   { path: 'carousel', component: Carousel2Component },
   { path: 'resposta/:id', component: PostRespostaComponent},
   { path: 'postagem-tela/:id', component: PostagemTelaComponent},
-  { path: 'config/:id', component: ConfigComponent}
+  { path: 'config/:id', component: ConfigComponent},
+  { path: 'conta/:id', component : ContaComponent},
+  { path : 'card', component : CardhomeComponent}
  
 ];
 

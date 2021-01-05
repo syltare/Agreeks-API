@@ -1,44 +1,44 @@
 @import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
 
-/* .bg{   
-    background-image: url('https://i.pinimg.com/originals/c9/e3/ff/c9e3ffa4ba330b6f69f91cb9d80e0811.jpg');
-    max-width:  1000px;
-    height: 1000px;
-    background-repeat: no-repeat;
-   
-    
-
-} */
 
 .sobre-text-color{
-    color: #562D15;  
+    color:black;  
 }
 
-/* .caixa{
 
-    height: 400px;
-} */
-
-/* .p2 {
+.p2 {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
-  } */
-  /* .caixap{
-    background-color:green;
-    width: 600px;
-    height: 600px;
-} 
- .caixab{
-    
-    width: 600px;
-    height: 600px;
-    padding: 120px 20px 20px 60px;
-} */
+  }
+
  .padd{
-    padding: 50px;
+    padding: 10px;
 } 
 
-.card{
-min-height: 200px;
-min-width : 500px;
+.img-login {
+    background-image: url(/assets/img/fundo-login.jpg);
+    width: 770px;
+    height: 600px;
 }
+
+ .hr-color {
+      background-color: turquoise;
+  }
+
+  .btn-primary-login {
+      background-color: #2D7345;
+      color: white;
+  }
+
+  .btn-primary-cadastro {
+      background-color: #DAA91B;
+      color: white;
+  }
+
+  .h3-cad {
+    margin: 0px;
+}
+
+.row {
+    margin-right: 0px;
+}
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Usuario } from '../model/Usuario';
 
 import { AuthService } from '../service/auth.service';
 
@@ -12,8 +13,8 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  
- id = environment.id
+  usuario :Usuario = new Usuario()
+ idUsuario = environment.id
  email = environment.email
   constructor(
     private router: Router,

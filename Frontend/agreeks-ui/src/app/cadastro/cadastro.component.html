@@ -1,104 +1,80 @@
-<!-- <div
-    style="background-image: url(https://cdn.discordapp.com/attachments/768840435442647064/788499529439248404/cebolinho.png);"> -->
-    <div class="bg">
-        <!-- Container da pagina Cadastro-->
-        <div class="container ">
-           <!--Row que engloba titulo-->
-       
-       
-       
-           <!--/Row que engloba titulo-->
-       
-           <div class="row">
-               <div class="col-md-12">
-                   
-               </div>
-           </div>
-          <div class="row mb-3 mt-3">
-           <div class="col-md-6 col-sm-12  ">
-               <div class="d-flex justify-content-center">
-                   <img class="w-50" src="/assets/img/logo2.png" alt="cebola">
-               </div>
-               <div class="d-flex justify-content-center align-items-center p2 sobre-text-color">
-                   <h2>Faça parte da nossa comunidade!</h2>
-                           
-               </div>
-           </div>
-       
-           <!--Row principal da pagina de cadastro-->
-          
-               <div class="col-md-6 col-sm-12 ">
-                   <div>
-       
-                       <!--Form nome-->
-       
-                       <div class="form-group sobre-text-color">
-                           <label for="nome"><h3>Nome</h3></label>
-                           <input type="text" class="form-control" required minlength="5" id="nome"
-                               placeholder="Digite o seu nome aqui" [(ngModel)]='usuario.nome' required>
-       
-                           <small id="nome" class="form-text text-muted">Insira um nome de no mínimo 4
-                               caracteres</small>
-                       </div>
-                        <!--/Form nome-->
-       
-                        <div class="form-group sobre-text-color">
-                           <label for="nome"><h3>Bibliografia</h3></label>
-                           <input type="text" class="form-control" id="nome" placeholder="Fale um pouco sobre você" [(ngModel)]='usuario.bio' required>
-                       </div>
-       
-                       <!--Form email-->
-                       <div class="form-group sobre-text-color">
-                           <label for="email"><h3>E-mail</h3></label>
-                           <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com"
-                               [(ngModel)]='usuario.email' required>
-                       </div>
-                       <!--/Form nome-->
-                       <div class="form-group sobre-text-color">
-                           <label for="email"><h3>Imagem</h3></label>
-                           <input type="imagem" class="form-control" id="email" placeholder="URL da imagem"
-                               [(ngModel)]='usuario.imagem' required>
-                       </div>
-       
-                       <!--Form senha-->
-                       <div class="form-group sobre-text-color">
-                           <label for="senha"><h3>Senha</h3></label>
-                           <input type="password" class="form-control" required minlength="4" id="senha"
-                               placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}'>
-                           <small id="passwordHelpBlock" class="form-text text-muted">
-                               Digite uma senha entre 3 a 20 caracteres
-                           </small>
-       
-       
-       
-                       </div>
-                       <!--/Form senha-->
-       
-                       <!--Form confirm senha-->
-                       <div class="form-group sobre-text-color">
-                           <label for="senhaConf"><h3>Confirme sua Senha</h3></label>
-                           <input type="password" class="form-control" minlength="3" id="senhaConf"
-                               placeholder="Digite a confirmação da senha" [(ngModel)]='usuario.senha' required>
-       
-                       </div>
-                       <!--Form confirm senha-->
-       
-                       <!--Button Cadastrar-->
-                       <div class="d-flex justify-content-center">
-                           <button class="btn btn-outline-success w-50" (click)='cadastrar()'>Cadastrar </button>
-                       </div>
-                       <!--Button Cadastrar-->
-       
-                   </div>
-               </div>
-           
-           <!--/Row principal da pagina de cadastro-->
-       
-       </div>
-       <!--/Container da pagina Cadastro -->
-       
-       </div>
-       
-       
-       </div>
-       
+<div class="row">
+    <div class="col-md-7">
+        <div class="img-cadastro">
+        </div>
+    </div>  
+
+    <!--Row principal da pagina de cadastro-->
+
+    <div class="col-md-4">
+        <div>
+            <h1 class="text-center font-weight-bold pt-5 text-uppercase">Cadastro</h1>
+            <!--Form nome-->
+
+            <div class="form-group sobre-text-color">
+                <label for="nome"></label>
+                <h3 class="h3-cad">Nome</h3>
+                <input type="text" class="form-control" required minlength="5" id="nome"
+                    placeholder="Digite o seu nome aqui" [(ngModel)]='usuario.nome' required>
+
+                <small id="nome" class="form-text text-muted">Insira um nome de no mínimo 4
+                    caracteres</small>
+            </div>
+            <!--/Form nome-->
+
+            <div class="form-group sobre-text-color">
+                <label for="nome"></label>
+                    <h3 class="h3-cad">Biografia</h3>                
+                <input type="text" class="form-control" id="nome" placeholder="Ocupação profissional"
+                    [(ngModel)]='usuario.bio' required>
+            </div>
+
+            <!--Form email-->
+            <div class="form-group sobre-text-color">
+                <label for="email"></label>
+                    <h3 class="h3-cad">Email</h3>                
+                <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"
+                    [(ngModel)]='usuario.email' required>
+            </div>
+            <!--/Form nome-->
+            <div class="form-group sobre-text-color">
+                <label for="email"></label>
+                    <h3 class="h3-cad">Imagem</h3>                
+                <input type="imagem" class="form-control" id="email" placeholder="URL da imagem"
+                    [(ngModel)]='usuario.imagem' required>
+            </div>
+
+            <!--Form senha-->
+            <div class="form-group sobre-text-color">
+                <label for="senha"></label>
+                    <h3 class="h3-cad">Senha</h3>                
+                <input type="password" class="form-control" required minlength="4" id="senha"
+                    placeholder="**************" (input)='conferirSenha($event)' value='{{senha}}'>
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                    Digite uma senha entre 8 a 20 caracteres
+                </small>
+            </div>
+            <!--/Form senha-->
+
+            <!--Form confirm senha-->
+            <div class="form-group sobre-text-color">
+                <label for="senhaConf"></label>
+                    <h3 class="h3-cad">Confirme sua Senha</h3>               
+                <input type="password" class="form-control" minlength="3" id="senhaConf"
+                    placeholder="**************" [(ngModel)]='usuario.senha' required>
+
+            </div>
+            <!--Form confirm senha-->
+
+            <!--Button Cadastrar-->
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary-cadastro w-50 mt-4" (click)='cadastrar()'>Cadastrar </button>
+            </div>
+            <!--Button Cadastrar-->
+
+        </div>
+    </div>
+
+    <!--/Row principal da pagina de cadastro-->
+
+</div>

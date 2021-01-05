@@ -81,31 +81,8 @@
                     <th scope="row">{{item.id}}</th>
                     <td>{{item.descricao}}</td>
                       <td class="d-flex justify-content-end">
-                        <a class="btn btn-outline-info mr-3" data-toggle="modal" data-target="#ExemploModalCentralizado"(click)='findByIdCategorias()'>Editar</a>
-                        <!-- Modal -->
-<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group ">
-          <label for="titulo sobre-text-color p2">Nome do tema:</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo" [(ngModel)]="item.descricao">
-          {{item.descricao}}
-      </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-outline-info w-25" data-dismiss="modal" (click)="salvar()">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
+                        <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-categoria', item.id]">Editar</a>
+                        
 
                         <a class="btn btn-outline-danger" [routerLink]="['/delete-categoria', item.id]" >Apagar</a>
                         
@@ -120,7 +97,7 @@
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <h1> Conta</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas doloribus nam quibusdam, saepe inventore at iste sapiente officiis harum illo a ad, tempora ut possimus! Assumenda animi vero repellendus ea.</p>
-            <button class="btn btn-primary" type="submit" [routerLink]="['/home']" >Botão</button>
+            <button class="btn btn-primary" type="submit" [routerLink]="['/conta',id]" >Editar Dados</button>
 
              <table class="table table-hover  mb-3 mt-3">
                 <thead>
@@ -131,25 +108,25 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr  >
                     <th scope="row">Nome</th>
-                    <td >Maurício  a</td>
+                    <td >{{nome}}</td>
                     
                   </tr>
 
                   <tr>
                     <th scope="row">E-mail</th>
-                    <td>Mau@email.com</td>
+                    <td>{{email}}</td>
                     
                   </tr>
                   <tr>
                     <th scope="row">Bio</th>
-                    <td>Mau@email.com</td>
+                    <td>{{bio}}</td>
                     
                   </tr>
                   <tr>
                     <th scope="row">Imagem</th>
-                    <td>Urlcom</td>
+                    <td>{{imagem}}</td>
                     
                   </tr>
                   <tr>

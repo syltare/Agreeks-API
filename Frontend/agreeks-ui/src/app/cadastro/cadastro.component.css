@@ -16,13 +16,29 @@
     font-family: Helvetica, Arial, sans-serif;
  }
 
- /* .bg{   
-  background-color: #D1D996;
-  height: 770px;
-  
-} */
-
-
 .sobre-text-color{
-    color: #562D15;
+    color: black;
+}
+
+.img-cadastro {
+    background-image: url(/assets/img/fundo-cadastro.jpg);
+    width: 770px;
+    height: 750px;
+}
+
+.btn-primary-cadastro {
+    background-color:  #DAA91B;
+    color: white;
+}
+
+.h3-cad {
+    margin: 0px;
+}
+
+.form-group {
+    margin-bottom: 0rem;
+}
+
+.row {
+    margin-right: 0px;
 }
