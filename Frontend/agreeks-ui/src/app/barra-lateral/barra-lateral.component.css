@@ -1,16 +1,37 @@
 @import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
 
 
-.p2 {
-    font-family: Helvetica, Arial, sans-serif;
+.p1 {
+    font-size: 14pt;
  }
 
+ .p2 {
+    font-size: 11pt;
+ }
 
 .sobre-text-color{
-    color: #FFFFFF;
+    color: black;
 }
 .cardp{
     
     background-color: #2D7345;
     
+}
+
+.hr-color {
+    background-color: turquoise;
+}
+
+.btn-primary-feed {
+    background-color:  #DAA91B;
+    color: white;
+}
+
+.btn-primary-login {
+    background-color: #14A670;
+    color: white;
+}
+.btn-primary-editar {
+    background-color: #F2A007;
+    color: white;
 }

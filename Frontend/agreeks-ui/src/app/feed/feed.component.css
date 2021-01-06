@@ -13,3 +13,21 @@
 /* .bg{   
     background-color: #D1D996;
   } */ 
+
+  .btn-primary-feed {
+    background-color:  #DAA91B;
+    color: white;
+}
+
+.hr-color {
+    background-color: turquoise;
+}
+
+.btn-primary-login {
+    background-color: #14A670;
+    color: white;
+}
+.btn-primary-editar {
+    background-color: #F2A007;
+    color: white;
+}

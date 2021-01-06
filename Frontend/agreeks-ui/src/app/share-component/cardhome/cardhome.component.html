@@ -26,10 +26,11 @@
       <div class="carousel-item active">
   
         <div class="col-md-3" style="float:left" *ngFor="let item of listaPostagens | slice:0:4">
+          
          <div class="card mb-2">
+          <img class="card-img-top"
+          src="https://as2.ftcdn.net/jpg/00/81/48/79/500_F_81487986_ZqzjKk1vn68y6vuw0DJFRA4yWz1AyOUO.jpg" alt="Card image cap">
            
-            <img class="card-img-top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title">{{item.titulo}}</h4>
               <p class="card-text">{{item.categoria.descricao}}</p>
