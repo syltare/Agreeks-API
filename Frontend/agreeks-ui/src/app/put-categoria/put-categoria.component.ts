@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
@@ -11,6 +12,7 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class PutCategoriaComponent implements OnInit {
   categoria: Categoria = new Categoria()
+  id = environment.id
 
   constructor(
     private categoriaService: CategoriaService,
@@ -34,8 +36,8 @@ export class PutCategoriaComponent implements OnInit {
   salvar() {
     this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp
-      this.router.navigate(['/cadastro-categoria'])
-      this.alerta.showAlertSucess('Tema atualizado com sucesso!')
+      this.router.navigate(['/feed'])
+      this.alerta.showAlertSucess('Categoria atualizada com sucesso!')
     })
   }
 

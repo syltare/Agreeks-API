@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
+import { environment } from 'src/environments/environment.prod';
 import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
@@ -10,6 +11,8 @@ import { CategoriaService } from '../service/categoria.service';
   styleUrls: ['./delete-categoria.component.css']
 })
 export class DeleteCategoriaComponent implements OnInit {
+  id = environment.id
+
   categoria: Categoria = new Categoria()
   constructor(
     private categoriaService: CategoriaService,
@@ -32,13 +35,13 @@ export class DeleteCategoriaComponent implements OnInit {
 
   btnSim() {
     this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
-      this.router.navigate(['/cadastro-tema'])
+      this.router.navigate(['/feed'])
       this.alerta.showAlertSucess('Tema apagado com sucesso!')
     })
   }
 
   btnNao() {
-    this.router.navigate(['/cadastro-tema'])
+    this.router.navigate(['/config'])
     this.alerta.showAlertDanger('Ação cancelada.')
   }
 

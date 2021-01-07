@@ -1,0 +1,49 @@
+@import url(//db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
+
+.ng-invalid.ng-touched{
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+     
+ }
+ .ng-valid{
+     transition-property:background-color;
+     transition-duration: 500ms;
+     border-color: #c3e6cb;
+     background-color:#d4edda;
+ }
+
+ .p2 {
+    font-family: Helvetica, Arial, sans-serif;
+ }
+
+.sobre-text-color{
+    color: black;
+}
+
+.img-cadastro {
+    background-image: url(/assets/img/fundo-cadastro.jpg);
+    width: 770px;
+    height: 750px;
+}
+
+.btn-primary-cadastro {
+    background-color:  #DAA91B;
+    color: white;
+}
+
+.h3-cad {
+    margin: 0px;
+}
+
+.form-group {
+    margin-bottom: 0rem;
+}
+
+.row {
+    margin-right: 0px;
+}
+
+.btn-primary-login {
+    background-color: #2D7345;
+    color: white;
+}

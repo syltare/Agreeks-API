@@ -9,6 +9,7 @@ export const environment = {
   bio:'',
   email : '',
   id : 0,
+  senha: '',
   
   idPost : 0,
   idCategoria : 0,

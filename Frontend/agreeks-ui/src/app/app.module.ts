@@ -33,6 +33,7 @@ import { SidebarComponent } from './share-component/sidebar/sidebar.component';
 import { PostagemTelaComponent } from './postagem-tela/postagem-tela.component';
 import { ConfigComponent } from './configuracoes/config/config.component';
 import { ContaComponent } from './configuracoes/conta/conta.component';
+import { CardhomeComponent } from './share-component/cardhome/cardhome.component';
 
 
 @NgModule({
@@ -63,6 +64,7 @@ import { ContaComponent } from './configuracoes/conta/conta.component';
     PostagemTelaComponent,
     ConfigComponent,
     ContaComponent,
+    CardhomeComponent,
     
     
   ],

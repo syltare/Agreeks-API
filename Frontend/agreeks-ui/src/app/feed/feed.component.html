@@ -1,4 +1,4 @@
-<div class="bg">
+<div>
   <div class="container">
 
     <div class="row">
@@ -12,16 +12,21 @@
      
         <div class="row d-flex align-items-end">
 
+          <button type="button" class="btn btn-primary-login w-100 mr-2" data-toggle="modal" data-target="#ExemploModalCentralizado">
+            Publicar sua dúvida
+          </button>
+
+          <button class="mr-2 btn btn-primary-editar w-100 mt-3" [routerLink]="['/config', idUsuario]">
+            Editar postagem
+          </button>
+
       
 
        
           <!-- Modal Publicação-->
 
          <!-- Botão para acionar modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
-  Está com Dúvida? Crie uma nova postagem!
-</button>
-<a    routerLink='/cadastro-categoria'>Cadastre uma nova</a>
+
 
 <!-- Modal -->
 <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -102,7 +107,7 @@
         </div>
 
 
-        <hr class="mt-5 mb-5">
+        <hr class="mt-5 mb-5 hr-color">
 
         <nav class="d-flex justify-content-center">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -121,12 +126,10 @@
           <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel"
             aria-labelledby="nav-postagens-tab">
             <div class="row mt-3 mb-3">
-              <div class="col-md-10 pr-0">
-                <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar" [(ngModel)]='titulo'>
+              <div class="col-md-12 pr-0">
+                <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar" [(ngModel)]='titulo' (keyup)='findByTituloPostagem()'>
               </div>
-              <div class="col-md-2 pl-0">
-                <button class="btn btn-outline-warning w-100" type="button" (click)='findByTituloPostagem()'>Pesquisar</button>
-              </div>
+             
             </div>
   
             <div class="row">
@@ -136,22 +139,13 @@
                   <div class="card-header">
                     <div class="row d-flex align-items-center">
                       <div class="col-md-8">
-                        <h5 class="card-tittle"> {{item.titulo}} </h5>
+                        <h3 class="card-tittle font-weight-bold"> {{item.titulo}} </h3>
                         <small>Categoria: {{item.categoria.descricao}} </small>
                       </div>
                       <div class="col-md-4 d-flex justify-content-end">
   
-                        <button class="mr-4 btn btn-outline-info" 
-                        [routerLink]="['/editar-post', item.id]">
-                          Editar
-                        </button>
-  
-                        <button class="btn btn-outline-danger ml-3"
-                        [routerLink]="['/delete-post', item.id]">
-                          Apagar
-                        </button>
-                        
-                        <button class="btn btn-outline-warning ml-3" [routerLink]="['/resposta', item.id]">
+                       
+                        <button class="btn btn-primary-editar ml-1" [routerLink]="['/resposta', item.id]">
                           Responder
                         </button>
   
@@ -172,12 +166,10 @@
           <div class="tab-pane fade" id="postagens-categorias" role="tabpanel" aria-labelledby="nav-presenca-tab">
 
             <div class="row mt-3 mb-3">
-              <div class="col-md-10 pr-0">
-                <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar" [(ngModel)]='nomeCategoria'>
+              <div class="col-md-12 pr-0">
+                <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar" [(ngModel)]='nomeCategoria' (keyup)='findByNomeCategoria()'>
               </div>
-              <div class="col-md-2 pl-0">
-                <button class="btn btn-outline-warning w-100" type="button" (click)='findByNomeCategoria()'>Pesquisar</button>
-              </div>
+           
             </div>
             
             <div class="row">
@@ -194,7 +186,7 @@
                   </div>
   
                   <div class="card-body" >
-                    <p class="card-text" aria-describedby="texto"> {{posta.texto}} </p>
+                    <p class="card-text" aria-describedby="texto"> {{posta.post}} </p>
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
                       Postado em {{posta.data | date: 'dd/MM/yyyy'}} às {{posta.data | date:'HH:mm'}}</small>
                   </div>

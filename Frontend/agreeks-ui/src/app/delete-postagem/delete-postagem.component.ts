@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from '../model/Postagem';
+import { environment } from 'src/environments/environment.prod';
 import { AlertasService } from '../service/alertas.service';
 import { PostagemService } from '../service/postagem.service';
 
@@ -10,7 +11,7 @@ import { PostagemService } from '../service/postagem.service';
   styleUrls: ['./delete-postagem.component.css']
 })
 export class DeletePostagemComponent implements OnInit {
-
+  id = environment.id
   postagem: Postagem = new Postagem()
 
   constructor(

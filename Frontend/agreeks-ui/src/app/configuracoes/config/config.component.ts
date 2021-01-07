@@ -18,12 +18,19 @@ import { environment } from 'src/environments/environment.prod';
 export class ConfigComponent implements OnInit {
   
   usuario : Usuario = new Usuario()
+  id = environment.id
+  nome = environment.nome
+  email = environment.email
+  bio = environment.bio
+  imagem = environment.imagem
+
   idUser: number
   confirmarSenha: string
   tipoUsuario: string
   
 
   categoria : Categoria = new Categoria()
+  descricao : string
   idCategoria : number
  
 
@@ -77,7 +84,7 @@ salvar() {
   this.categoria.id = this.idCategoria
   this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
     this.categoria = resp
-    this.alerta.showAlertSucess('Tema atualizado com sucesso!')
+    this.alerta.showAlertSucess('Categoria atualizado com sucesso!')
     this.findAllCategorias()
   })
 }
@@ -88,8 +95,8 @@ findByIdCategorias(){
 }
 btnSim() {
   this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
-    this.router.navigate(['/cadastro-tema'])
-    this.alerta.showAlertSucess('Tema apagado com sucesso!')
+    this.router.navigate(['/feed'])
+    this.alerta.showAlertSucess('Categoria apagada com sucesso!')
   })
 }
 
