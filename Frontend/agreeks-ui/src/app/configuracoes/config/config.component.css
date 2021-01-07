@@ -10,3 +10,22 @@
     background-color: #F2A007;
     color: white;
 }
+
+.img-lista {
+    fill: orange;
+}
+
+.btn-primary-delete {
+    background-color: #E37119;
+    color: white;
+}
+
+.btn-primary-alterar {
+    background-color: #009EB3;
+    color: white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #2D7345;
+}

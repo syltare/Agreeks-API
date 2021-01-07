@@ -10,7 +10,7 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-md-8">
                             <h5 class="card-title">{{postagem.titulo}} </h5>
-                            <small>Tema: {{postagem.categoria.descricao}}</small>
+                            <small>Categoria: {{postagem.categoria.descricao}}</small>
                         </div>
                         <div class="col-md-4 d-flex justify-content-end">
                         </div>
@@ -29,8 +29,8 @@
 
             <h5 class="text-center">Tem certeza que deseja apagar essa postagem?</h5>
             <div class="d-flex justify-content-center mt-5">
-                <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
-                <button class="btn btn-outline-danger mr-3" (click)="btnNao()">Não</button>
+                <button class="btn btn-primary-sim mr-3" (click)="btnSim()">Sim</button>
+                <button class="btn btn-primary-nao mr-3" (click)="btnNao()">Não</button>
             </div>
         </div>
     </div>

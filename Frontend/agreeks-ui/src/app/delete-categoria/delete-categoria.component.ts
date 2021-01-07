@@ -32,13 +32,13 @@ export class DeleteCategoriaComponent implements OnInit {
 
   btnSim() {
     this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
-      this.router.navigate(['/cadastro-tema'])
-      this.alerta.showAlertSucess('Tema apagado com sucesso!')
+      this.router.navigate(['/feed'])
+      this.alerta.showAlertSucess('Categoria apagada com sucesso!')
     })
   }
 
   btnNao() {
-    this.router.navigate(['/cadastro-tema'])
+    this.router.navigate(['/feed'])
     this.alerta.showAlertDanger('Ação cancelada.')
   }
 

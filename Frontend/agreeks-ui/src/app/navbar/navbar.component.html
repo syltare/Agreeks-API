@@ -1,63 +1,62 @@
 <nav class="navbar navbar-expand-lg navbar-dark text-white monospace text-uppercase ima">
+  <a class="navbar-brand" href="#">
+    <img src="https://i.imgur.com/QWmnyuI.png" width="50" height="50" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div class="collapse navbar-collapse font-weight" id="conteudoNavbarSuportado">
-
-    <a class="navbar-brand" href="#">
-      <img src="https://i.imgur.com/QWmnyuI.png" width="50" height="50" alt="">
-    </a>
-    <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item">
-        <a class="navbar-brand" href="#">
-          <img src="https://i.imgur.com/1txqqp1.png" width="120" height="50" alt="logo agreeks"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-          aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </li> -->
-      <li class="nav-item">
-        <a class="nav-link text-uppercase text-light" routerLink="/home">Home</a>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link text-uppercase text-light" href="#">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-uppercase text-light" routerLink="/sobre-nos">Sobre nós</a>
+      <li class="nav-item active">
+        <a class="nav-link text-uppercase text-light" href="#">Sobre Nós</a>
       </li>
+   <li>  <form class="pesquisa">
+    <input type = "search" id="texto" list="historico">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <datalist id="historico" >
+     
+     
+       
+      
+      <option  *ngFor='let item of listaPostagens' value={{item.titulo}}>
+       <a routerLink="/login"> {{item.post}}</a>
+      </option>
+   
+   
+   
+   
+    </datalist>
+  </form>
+</li>
+   
     </ul>
+<ul class="navbar-nav  mt-2 mt-lg-0">
+  <div *ngIf='auth.btnLogin()'>
+    <li class="nav-item">
+      <a class="nav-link text-uppercase text-light " routerLink="/login">Login</a>
+    </li>
   </div>
-
-  <div class="d-flex justify-content-end">
-    <ul class="navbar-nav mr-auto">
-      <div *ngIf='auth.btnLogin()'>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase text-light" routerLink="/login">Login</a>
-        </li>
-      </div>
-      <div *ngIf='auth.btnLogin()'>
-        <li class="nav-item">
-        <a class="nav-link text-uppercase text-light" routerLink="/cadastro">Cadastrar</a>
-        </li>
-      </div>
-      <div *ngIf='auth.bntSair()'>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase text-light" routerLink="/feed">Feed</a>
-        </li>
-      </div>
-      <div *ngIf='auth.bntSair()'>
-        <li class="nav-item">
-          <a class="nav-link text-uppercase text-light" (click)='sair()'>Sair</a>
-        </li>
-      </div>
-
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          OPÇÕES
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#" disabled>Dark-Mode</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Sobre nós</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Contato</a>
-          </div>
-      </li> -->
-    </ul>
+  <div *ngIf='auth.btnLogin()'>
+    <li class="nav-item">
+    <a class="nav-link text-uppercase text-light" routerLink="/cadastro">Cadastrar</a>
+    </li>
+  </div>
+  <div *ngIf='auth.bntSair()'>
+    <li class="nav-item">
+      <a class="nav-link text-uppercase text-light" routerLink="/feed">Feed</a>
+    </li>
+  </div>
+  <div *ngIf='auth.bntSair()'>
+    <li class="nav-item">
+      <a class="nav-link text-uppercase text-light" (click)='sair()'>Sair</a>
+    </li>
+  </div>
+  </ul>
+  
+  
   </div>
 </nav>

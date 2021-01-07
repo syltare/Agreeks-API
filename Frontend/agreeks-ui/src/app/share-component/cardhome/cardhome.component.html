@@ -29,10 +29,10 @@
           
          <div class="card mb-2">
           <img class="card-img-top"
-          src="https://as2.ftcdn.net/jpg/00/81/48/79/500_F_81487986_ZqzjKk1vn68y6vuw0DJFRA4yWz1AyOUO.jpg" alt="Card image cap">
+          src="/assets/img/cardhome.png" alt="Card image cap">
            
             <div class="card-body">
-              <h4 class="card-title">{{item.titulo}}</h4>
+              <h2 class="card-title">{{item.titulo}}</h2>
               <p class="card-text">{{item.categoria.descricao}}</p>
               <a class="btn btn-primary "[routerLink]="['/resposta', id]">Visualizar</a>
               
@@ -54,11 +54,11 @@
         <div class="col-md-3" style="float:left" *ngFor="let item of listaPostagens | slice:4:8">
             <div class="card mb-2">
                <img class="card-img-top"
-                 src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                 src="/assets/img/cardhom2.png" alt="Card image cap">
                <div class="card-body">
-                 <h4 class="card-title">{{item.titulo}}</h4>
+                 <h2 class="card-title">{{item.titulo}}</h2>
                  <p class="card-text">{{item.categoria.descricao}}</p>
-                 <a class="btn btn-primary">Button</a>
+                 <a class="btn btn-primary">Visualizar</a>
                </div>
              </div>
            </div>
@@ -74,5 +74,6 @@
   
   </div>
   <!--/.Carousel Wrapper-->
+
 
 
