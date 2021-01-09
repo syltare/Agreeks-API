@@ -33,7 +33,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Faça aqui Sua Pergunta!</h5>
+        <h1 class="modal-title font-weight-bold text-uppercase" id="TituloModalCentralizado">Faça aqui Sua Pergunta!</h1>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           
         </button>
@@ -43,7 +43,7 @@
         <div class="row mb-1 mt-1">
           <div class="col-md-12">
             <div class="form-group">
-              
+              <label class="sobre-text-color p2 font-weight-bold" for="categoria">Título</label>
               <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
                 [(ngModel)]='postagem.titulo'>
               </div>
@@ -54,7 +54,7 @@
         <div class="row">
           <div class="col">
             <div class="form-group m-0">
-              <label class="sobre-text-color p2" for="categoria">Categoria</label>
+              <label class="sobre-text-color p2 font-weight-bold" for="categoria">Categoria</label>
               <select name="categoria" id='categoria' class="form-control" [(ngModel)]='idCategoria'
                 (change)='findByIdCategorias()'>
                 <option *ngFor='let item of listaCategorias' value={{item.id}}>
@@ -78,10 +78,10 @@
           </div>
          
 
-          <div class="row">
+          <div class="row mb-1 mt-3">
             <div class="col-md-12">
               <div class="form-group">
-                <label class="sobre-text-color p2 font-weight-bold" for="post">Texto:</label>
+                <label class="sobre-text-color p2 font-weight-bold" for="post">Dúvida</label>
                 <textarea class="form-control" id="post" rows="3" placeholder="Digite aqui o seu texto"
                   [(ngModel)]='postagem.post'></textarea>
               </div>
@@ -93,8 +93,8 @@
 
   
   <div class="modal-footer">
-    <button type="button" class="btn btn-danger"data-dismiss="modal">Cancelar</button>
-    <button type="button" class="btn btn-success"data-dismiss="modal" (click)='publicar()'>Publicar</button>
+    <button type="button" class="btn btn-primary-cancelar"data-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-primary-salvar"data-dismiss="modal" (click)='publicar()'>Publicar</button>
    
   </div>
     </div>
@@ -146,7 +146,7 @@
   
                        
                         <button class="btn btn-primary-editar ml-1" [routerLink]="['/resposta', item.id]">
-                          Responder
+                          Ver Discussão
                         </button>
   
                       </div>
@@ -156,7 +156,7 @@
                   <div class="card-body">
                     <p class="card-text" aria-describedby="texto"> {{item.post}} </p>
                     <small id="texto" class="form-text m-0 text-muted mb-3 text-monospace">
-                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
+                      Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} por {{item.usuario.nome}}</small>
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@
 
             <div class="row mt-3 mb-3">
               <div class="col-md-12 pr-0">
-                <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar" [(ngModel)]='nomeCategoria' (keyup)='findByNomeCategoria()'>
+                <input class="form-control w-100" type="search" placeholder="Pesquisar categoria" aria-label="Pesquisar" [(ngModel)]='nomeCategoria' (keyup)='findByNomeCategoria()'>
               </div>
            
             </div>
@@ -180,7 +180,7 @@
                     <div class="card-header">
                       <div class="row d-flex align-items-center">
                           <div class="col-md-12">
-                              <h5 class="card-title"> {{posta.titulo}} </h5>
+                              <h3 class="card-title font-weight-bold"> {{posta.titulo}} </h3>
                           </div>
                       </div>
                   </div>

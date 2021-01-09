@@ -1,3 +1,18 @@
-h1{
-    font-size: 36pt;
+
+.hr-color {
+    background-color: turquoise;
+}
+
+.btn-primary-cancelar {
+    background-color: #E37119;
+    color: white;
+}
+
+.btn-primary-salvar {
+    background-color: #009EB3;
+    color: white;
+}
+
+#titulo-post {
+    font-size: 18pt;
 }

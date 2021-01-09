@@ -9,8 +9,8 @@
                 <div class="card-header">
                     <div class="row d-flex align-items-center">
                         <div class="col-md-8">
-                            <h5 class="card-title">{{postagem.titulo}} </h5>
-                            <small>Tema: {{postagem.categoria.descricao}}</small>
+                            <h2 class="card-title">{{postagem.titulo}} </h2>
+                            <small>Categoria: {{postagem.categoria.descricao}}</small>
                         </div>
                         <div class="col-md-4 d-flex justify-content-end">
                         </div>
@@ -27,10 +27,10 @@
 
             <hr class="mt-4 mb-4">
 
-            <h5 class="text-center">Tem certeza que deseja apagar essa postagem?</h5>
+            <h3 class="text-center">Tem certeza que deseja apagar essa postagem?</h3>
             <div class="d-flex justify-content-center mt-5">
-                <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
-                <button class="btn btn-outline-danger mr-3 "[routerLink]="['/config',id]">Não</button>
+                <button class="btn btn-primary-sim mr-3" (click)="btnSim()">Sim</button>
+                <button class="btn btn-primary-nao mr-3 "[routerLink]="['/config',id]">Não</button>
             </div>
         </div>
     </div>

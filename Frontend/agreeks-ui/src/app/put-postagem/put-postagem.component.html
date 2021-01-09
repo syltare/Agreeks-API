@@ -20,7 +20,7 @@
                     </div>
                     
                     <div class="form-group m-0">
-                        <label class="" for="categoria">Escolha uma Categoria ou <a routerLink="/cadastro-categoria">Cadastre uma nova</a></label>
+                        <label class="" for="categoria">Escolha uma Categoria</label>
                         <select name="categoria" id='categoria' [(ngModel)]="idCategoria" (change)="findByIdCategoria()" class="form-control">
                           <option *ngFor="let item of listaCategorias" value={{item.id}}>
                             {{item.descricao}}
@@ -29,7 +29,7 @@
                       </div>
                     
                     <div class="d-flex justify-content-end mt-3">
-                        <button type="button" class="btn btn-primary-voltar w-25 mr-3" [routerLink]="['/feed']">Voltar</button>
+                        <button type="button" class="btn btn-primary-voltar w-25 mr-3" [routerLink]="['/config',id]">Voltar</button>
                         <button type="button" class="btn btn-primary-salvar w-25" (click)="salvar()">Salvar</button>
                     </div>
                 </div>
